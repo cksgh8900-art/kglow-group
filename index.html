@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="K-GLOW GROUP은 두 법인이 시장별로 일해요. 미국은 K-GLOW가 Amazon·TikTok Shop 입점과 운영, 광고, 크리에이터 마케팅을, 인도는 현지법인 HANGUK SKIN이 화장품 인증·수입·유통을 맡아요.">
 <meta name="keywords" content="K-GLOW,케이글로우,HANGUK SKIN,한국스킨,아마존 입점 대행,아마존 운영 대행,틱톡샵 미국 진출,미국 인플루언서 마케팅,K뷰티 미국 진출,인도 화장품 수출,인도 화장품 수입,인도 뷰티 진출,인도 현지 유통">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 
 
 <link rel="canonical" href="https://www.kglowofficial.co.kr/">
@@ -32,6 +32,7 @@
 <title>K-GLOW GROUP | 미국 Amazon·TikTok Shop 운영, 인도 화장품 수입·유통</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
 :root{
@@ -42,7 +43,7 @@
   --ok:#1F8A5B; --ok-soft:#E3F4EC; --warn:#B4541E; --warn-soft:#FBEBDF;
   --shadow:0 1px 2px rgba(19,28,43,.06),0 12px 40px -12px rgba(19,28,43,.18);
   --r-lg:32px; --r-md:20px; --r-sm:12px;
-  --kr:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --kr:"Pretendard Variable","Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --logo-light:inline-block; --logo-dark:none;
 }
@@ -125,7 +126,7 @@ body.in-india .progress{background:var(--gold)}
 .hero .line:nth-child(2){animation-delay:.12s}
 @keyframes rise{from{transform:translateY(24px)}to{transform:none}}
 .hero .lead{max-width:36em;margin-top:24px;font-size:clamp(17px,1.8vw,22px);color:var(--ink2);font-weight:500}
-.doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(36px,5vw,56px)}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(32px,4.5vw,48px)}
 .door{position:relative;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:var(--r-lg);text-decoration:none;
   min-height:220px;overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
 .door:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
@@ -415,6 +416,107 @@ footer{padding-block:36px 32px;background:var(--bg);border-top:1px solid var(--l
 .foot-links a:hover{text-decoration:underline;text-underline-offset:3px}
 .foot-links .linkbtn{font-size:13px}
 
+
+/* ===== v2 additions ===== */
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-cta .btn{padding:15px 24px;font-size:16px}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--ink3)}
+
+@media (max-width:560px){.hero h1{font-size:min(9.2vw,40px);line-height:1.18}.hero h1 .pre{display:block}.hero h1 .hl-kg{height:1.3em;vertical-align:-.3em}.hero h1 .line+.line{margin-top:.28em}}
+.result.flash{animation:rflash .5s ease}
+@keyframes rflash{from{opacity:.35;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.worry{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:clamp(28px,4vw,40px);font-size:15.5px}
+.worry .wk{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ink3);padding:5px 10px;border:1px solid var(--line);border-radius:999px}
+.worry .wq{font-weight:700;color:var(--ink);transition:opacity .35s,transform .35s}
+.worry .wq.out{opacity:0;transform:translateY(6px)}
+.worry+.hero-cta{margin-top:18px}
+
+/* diagnosis */
+.check{padding-block:clamp(56px,8vw,96px) 0}
+.check-box{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(22px,3.4vw,44px)}
+.check-box>*{min-width:0}
+.check h2{font-size:clamp(28px,3.8vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1.2}
+.check .sub{color:var(--ink2);margin-top:10px}
+.q{margin-top:26px;border:0;padding:0}
+.q legend{font-weight:800;font-size:16px;margin-bottom:12px;padding:0}
+.q legend span{font-family:var(--mono);color:var(--blue-ink);font-size:13px;margin-right:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-block;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;font-weight:600;color:var(--ink2);cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.opts input:checked+span{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.opts input:focus-visible+span{outline:3px solid var(--blue);outline-offset:2px}
+.result{background:var(--bg);border-radius:var(--r-md);padding:clamp(20px,2.6vw,30px);display:grid;gap:16px;align-content:start}
+.result .k{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ink3)}
+.result h3{font-size:clamp(22px,2.4vw,28px);font-weight:900;letter-spacing:-.03em;line-height:1.3}
+.result ol{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.result li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;font-size:15.5px}
+.result li b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);font-family:var(--mono);font-size:13px}
+.result .first{border-left:3px solid var(--gold);padding:4px 0 4px 14px;font-size:15px;color:var(--ink2)}
+.result .first b{color:var(--ink)}
+.result .btn{justify-self:start;padding:14px 22px}
+.result .fine{font-size:13px;color:var(--ink3)}
+@media (max-width:900px){.check-box{grid-template-columns:1fr}}
+
+/* revenue sources */
+.sources{list-style:none;padding:0;margin:clamp(20px,3vw,32px) 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:none}
+.src{position:relative}
+.src:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;width:6px;height:6px;border-top:2px solid var(--ink3);border-right:2px solid var(--ink3);transform:translateY(-50%) rotate(45deg);z-index:1}
+.sources-note{margin-top:14px;font-size:15px;color:var(--ink2);font-weight:600}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:grid;gap:8px;align-content:start}
+.src .k{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue-ink)}
+.src h4{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.src p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.55}
+.sources-h{margin-top:clamp(40px,6vw,72px);font-size:clamp(22px,2.6vw,30px);font-weight:900;letter-spacing:-.03em}
+@media (max-width:900px){.sources{grid-template-columns:repeat(2,minmax(0,1fr))}.src:nth-child(2)::after{display:none}}
+@media (max-width:480px){.src{padding:16px}.src h4{font-size:17px}.src p{font-size:13.5px}.src:not(:last-child)::after{display:none}}
+
+/* real case */
+.case{border:1px solid var(--line);background:var(--surface);border-radius:var(--r-md);padding:20px;display:grid;gap:14px;max-width:30em}
+.case .k{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--gold-ink)}
+.case p{margin:0;font-size:15.5px;color:var(--ink);line-height:1.6}
+.case .row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.case .lab{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--ink2)}
+.case .lab b{font-family:var(--mono);color:var(--ink)}
+.case .track{height:10px;border-radius:6px;background:var(--line);overflow:hidden}
+.case .fill{height:100%;border-radius:6px}
+.case .fine{font-size:12.5px;color:var(--ink3)}
+
+/* process */
+.process{padding-block:clamp(48px,7vw,88px);border-top:1px solid var(--line)}
+.process h3{font-size:clamp(28px,3.8vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1.22}
+.process .sub{color:var(--ink2);margin-top:12px;max-width:34em}
+.steps{list-style:none;margin:clamp(24px,4vw,40px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:st}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;display:grid;gap:10px;align-content:start}
+.steps .n{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--blue-ink)}
+.steps h4{margin:0;font-size:22px;font-weight:900;letter-spacing:-.02em}
+.steps p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.55}
+.steps .get{font-size:13.5px;color:var(--ink);background:var(--blue-soft);border-radius:10px;padding:8px 12px}
+.steps .get b{color:var(--blue-ink)}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.steps{grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--line)}.steps li{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:18px 0;grid-template-columns:64px minmax(0,1fr);column-gap:8px;row-gap:6px}.steps li>*{grid-column:2}.steps .n{grid-column:1;grid-row:1/span 3;padding-top:4px}.steps h4{font-size:19px}}
+
+/* safeguards */
+.safe{padding-block:clamp(72px,10vw,120px) 0}
+.safe h2{font-size:clamp(30px,4.4vw,54px);font-weight:900;letter-spacing:-.04em;line-height:1.2}
+.safe .sub{color:var(--ink2);margin-top:12px}
+.safe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:clamp(28px,4vw,44px)}
+.sg{border-top:2px solid var(--ink);padding-top:18px;display:grid;gap:8px;align-content:start}
+.sg h4{margin:0;font-size:19px;font-weight:800;letter-spacing:-.02em}
+.sg p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.55}
+@media (max-width:760px){.safe-grid{grid-template-columns:minmax(0,1fr);row-gap:24px}}
+
+/* mobile sticky CTA */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.mbar.on{transform:none}
+.mbar .btn{flex:1;padding:13px 10px;font-size:15px}
+.mbar .kk{flex:none;background:#FEE500;color:#191600;border-radius:14px;padding:0 16px;display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14.5px;text-decoration:none}
+@media (max-width:760px){.mbar{display:flex} footer{padding-bottom:84px}}
+@media (prefers-reduced-motion:reduce){.mbar{transition:none}}
+
 /* dialog */
 dialog{border:0;border-radius:var(--r-md);padding:0;max-width:min(720px,calc(100% - 32px));width:100%;background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
 dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
@@ -430,6 +532,45 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
 }
+
+.foot-guides{margin:14px 0 4px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.foot-guides a{font-weight:700}
+.guide-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.guide-links a{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-weight:700;font-size:15px;text-decoration:none}
+.guide-links a:hover{border-color:var(--ink3)}
+/* guide pages */
+.gp-hero{padding:clamp(48px,7vw,88px) 0 clamp(28px,4vw,44px)}
+.gp-hero .wrap{display:grid;gap:18px}
+.gp-hero .wrap>*{max-width:860px}
+.crumb{font-size:14px;color:var(--ink3);display:flex;flex-wrap:wrap;gap:6px}
+.crumb a{color:var(--ink2)}
+.gp-hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-.03em;line-height:1.18;word-break:keep-all;text-wrap:balance;margin:0}
+.gp-hero .lead{font-size:clamp(17px,1.6vw,20px);color:var(--ink2);line-height:1.7;word-break:keep-all;text-wrap:pretty;margin:0}
+.gp-meta{font-size:13.5px;color:var(--ink3)}
+.gdoc{display:grid;gap:clamp(48px,6vw,72px);padding-bottom:clamp(72px,9vw,112px)}
+.gdoc section{display:grid;gap:16px;max-width:880px}
+.gdoc h2{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.3;word-break:keep-all;text-wrap:balance;margin:0}
+.gdoc p{color:var(--ink2);line-height:1.75;word-break:keep-all;text-wrap:pretty;margin:0}
+.gdoc p b,.gdoc li b{color:var(--ink)}
+.gcards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:none!important}
+.gcards li{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:8px;align-content:start;min-width:0}
+.gcards .k{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--blue)}
+.gcards h3{font-size:19px;font-weight:800;margin:0;word-break:keep-all}
+.gcards p{font-size:15.5px}
+@media (max-width:760px){.gcards{grid-template-columns:minmax(0,1fr)}}
+.gbul{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--ink2);line-height:1.7;word-break:keep-all}
+.gnote{font-size:14px;color:var(--ink3)}
+.gcta{background:var(--navy);color:var(--on-navy);border-radius:24px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;max-width:none!important}
+.gcta h2{color:var(--on-navy)}
+.gcta p{color:var(--on-navy2)!important}
+.gcta .acts{display:flex;flex-wrap:wrap;gap:10px}
+.gcta .btn-line{color:var(--on-navy);border:1px solid rgba(255,255,255,.25);background:transparent}
+@media (max-width:760px){.gcta{grid-template-columns:minmax(0,1fr)}}
+.gqa{display:grid;border-top:1px solid var(--line)}
+.gqa div{padding:20px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.gqa h3{font-size:18px;font-weight:800;margin:0;word-break:keep-all}
+.gqa p{font-size:16px}
+.ggrp{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue);margin:0}
 </style>
 </head>
 <body>
@@ -456,10 +597,16 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
     <div class="wrap">
       <p class="eyebrow">K-GLOW GROUP</p>
       <h1 aria-label="미국은 K-GLOW가, 인도는 HANGUK SKIN이.">
-        <span class="line" aria-hidden="true">미국은 <img class="hl-kg logo-l" src="/logo_kglow_light.png" alt=""><img class="hl-kg logo-d" src="/logo_kglow_dark.png" alt="">가,</span>
-        <span class="line" aria-hidden="true">인도는 <img class="hl-hs logo-l" src="/logo_hs_light.svg" alt=""><img class="hl-hs logo-d" src="/logo_hs_dark.svg" alt="">이.</span>
+        <span class="line" aria-hidden="true"><span class="pre">미국은</span> <img class="hl-kg logo-l" src="/logo_kglow_light.png" alt=""><img class="hl-kg logo-d" src="/logo_kglow_dark.png" alt="">가,</span>
+        <span class="line" aria-hidden="true"><span class="pre">인도는</span> <img class="hl-hs logo-l" src="/logo_hs_light.svg" alt=""><img class="hl-hs logo-d" src="/logo_hs_dark.svg" alt="">이.</span>
       </h1>
       <p class="lead">한 그룹 안에서, 두 법인이 각자의 일을 전문으로 해요.</p>
+
+      <p class="worry" aria-live="off"><span class="wk">요즘 자주 듣는 고민</span><span class="wq" id="worry">“Amazon에 올렸는데 주문이 거의 없어요”</span></p>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="#check" data-cta="hero-check">1분 진출 진단 받기</a>
+        <a class="btn btn-line" href="#contact" data-cta="hero-contact">바로 상담 요청</a>
+      </div>
 
       <div class="doors">
         <a class="door us" href="#us">
@@ -476,6 +623,50 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
     </div>
   </section>
 
+  <!-- CHECK -->
+  <section class="check" id="check" aria-labelledby="check-t">
+    <div class="wrap">
+      <div class="check-box">
+        <form id="checkform" onsubmit="return false">
+          <h2 id="check-t">세 가지만 고르면,<br>맞는 길을 알려드려요</h2>
+          <p class="sub">상담 전에 가볍게 확인해보세요. 고른 내용은 문의 양식에 그대로 옮겨져요.</p>
+          <fieldset class="q"><legend><span>01</span>어느 시장이 궁금하세요?</legend>
+            <div class="opts">
+              <label><input type="radio" name="mk" value="us" checked><span>미국</span></label>
+              <label><input type="radio" name="mk" value="in"><span>인도</span></label>
+              <label><input type="radio" name="mk" value="both"><span>둘 다</span></label>
+            </div></fieldset>
+          <fieldset class="q"><legend><span>02</span>지금 어디쯤이세요?</legend>
+            <div class="opts">
+              <label><input type="radio" name="st" value="pre" checked><span>아직 판매 전</span></label>
+              <label><input type="radio" name="st" value="kr"><span>한국에서만 판매 중</span></label>
+              <label><input type="radio" name="st" value="abroad"><span>이미 해외에서 판매 중</span></label>
+            </div></fieldset>
+          <fieldset class="q"><legend><span>03</span>가장 큰 고민은요?</legend>
+            <div class="opts">
+              <label><input type="radio" name="cn" value="start" checked><span>어디서부터 시작할지</span></label>
+              <label><input type="radio" name="cn" value="ads"><span>광고 효율</span></label>
+              <label><input type="radio" name="cn" value="creator"><span>크리에이터·콘텐츠</span></label>
+              <label><input type="radio" name="cn" value="cert"><span>인증·통관</span></label>
+              <label><input type="radio" name="cn" value="plateau"><span>매출이 멈췄어요</span></label>
+            </div></fieldset>
+        </form>
+        <div class="result" aria-live="polite">
+          <span class="k">추천 경로</span>
+          <h3 id="r-title">미국, 채널 선택부터 차근차근</h3>
+          <ol id="r-steps">
+            <li><b>1</b><span>어느 채널로 시작할지 정해요 (Amazon · TikTok Shop)</span></li>
+            <li><b>2</b><span>리스팅과 계정을 브랜드 명의로 셋업해요</span></li>
+            <li><b>3</b><span>광고와 크리에이터를 작게 테스트해요</span></li>
+          </ol>
+          <p class="first" id="r-first"><b>먼저 볼 것</b> · 첫 상담에서 시장과 채널 순서를 같이 정해요</p>
+          <a class="btn btn-blue" href="#contact" id="r-go">이 내용으로 상담 요청하기 →</a>
+          <p class="fine">상담 전 참고용이에요. 실제 진행은 제품과 상황을 보고 함께 정해요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- US CHAPTER -->
   <section class="chapter chapter-us" id="us" data-chapter="us">
     <div class="wrap">
@@ -483,12 +674,27 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
         <p class="eyebrow"><img class="logo-l" src="/logo_kglow_light.png" alt="K-GLOW"><img class="logo-d" src="/logo_kglow_dark.png" alt="K-GLOW"><span class="nw">미국 사업 · 한국법인</span></p>
         <h2>Amazon과 TikTok Shop,<br>팔리는 구조를 운영해요.</h2>
       </div>
+      <p class="sources-h">미국 고객이 사기까지, 보통 이 길을 지나요</p>
+      <ol class="sources">
+        <li class="src"><span class="k">01 · 알게 되고</span><h4>크리에이터 콘텐츠</h4><p>우리를 모르던 고객이 처음 만나는 입구예요.</p></li>
+        <li class="src"><span class="k">02 · 찾아보고</span><h4>검색 광고</h4><p>궁금해서 검색할 때 우리 제품이 먼저 보이게 해요.</p></li>
+        <li class="src"><span class="k">03 · 믿고</span><h4>리뷰·평점</h4><p>처음 보는 브랜드도 믿고 살 수 있게 쌓아요.</p></li>
+        <li class="src"><span class="k">04 · 바로 사요</span><h4>라이브·숏폼</h4><p>TikTok Shop에서는 보는 자리에서 바로 결제해요.</p></li>
+      </ol>
+      <p class="sources-note">K-GLOW는 이 길 중 막힌 곳부터 찾아서 풀어요.</p>
 
       <!-- F1 creator -->
       <div class="feature">
         <div class="copy">
           <h3>팔로워 수 말고,<br>고객으로 고르는<br>크리에이터</h3>
           <p>크리에이터의 시청자가 우리 고객과 맞는지 먼저 확인해요.</p>
+          <div class="case">
+            <span class="k">실제 캠페인에서 있었던 일</span>
+            <p>같은 스킨케어 제품을 같은 기간에, 둘 다 제품 증정과 판매 커미션으로 진행했어요. 팔로워 2천 명대 크리에이터가 20만 명대보다 <b>4배</b> 더 팔았어요.</p>
+            <div class="row"><div class="lab"><span>팔로워 2천 명대</span><b>판매 ×4</b></div><div class="track"><div class="fill" style="width:100%;background:var(--ok,#1F9D6B)"></div></div></div>
+            <div class="row"><div class="lab"><span>팔로워 20만 명대</span><b>판매 ×1</b></div><div class="track"><div class="fill" style="width:25%;background:var(--ink3)"></div></div></div>
+            <span class="fine">브랜드명 비공개 · 결과는 제품과 상황에 따라 달라요</span>
+          </div>
         </div>
         <figure class="stage">
           <div class="demo" id="demo" data-mode="followers">
@@ -572,6 +778,16 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
           </div>
         </div>
       </div>
+      <div class="process">
+        <h3>이런 순서로 진행해요</h3>
+        <p class="sub">단계별 기간은 제품과 계정 상태에 따라 달라요. 성과를 미리 약속하기보다, 한 일과 다음에 바꿀 일을 정기적으로 공유해요.</p>
+        <ol class="steps">
+          <li><span class="n">STEP 01</span><h4>진단</h4><p>제품, 가격, 한국 판매 데이터, 계정 상태를 먼저 봐요.</p><span class="get"><b>받아보시는 것</b> · 진출 방향과 우선순위</span></li>
+          <li><span class="n">STEP 02</span><h4>셋업</h4><p>브랜드 명의로 계정, 리스팅, 광고 구조를 만들어요.</p><span class="get"><b>받아보시는 것</b> · 판매 준비가 된 계정</span></li>
+          <li><span class="n">STEP 03</span><h4>테스트</h4><p>광고와 크리에이터를 작게 돌려 반응을 확인해요.</p><span class="get"><b>받아보시는 것</b> · 무엇이 먹히는지 데이터</span></li>
+          <li><span class="n">STEP 04</span><h4>확장</h4><p>효율이 확인된 것에만 예산과 채널을 넓혀요.</p><span class="get"><b>받아보시는 것</b> · 정기 리포트와 다음 계획</span></li>
+        </ol>
+      </div>
       <div class="chapter-cta">
         <p>우리 제품도<br>미국에서 될까요?</p>
         <a class="btn" href="#contact" data-topic="t-amz">미국 사업 문의하기 →</a>
@@ -639,10 +855,10 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
           <div class="route-wrap">
             <div class="ends"><span>SEOUL · 브랜드와 소통</span><span>GURUGRAM · 현지 실행</span></div>
             <ol class="route">
-              <li><span class="n">01</span><div><h4>시장 진입</h4><p>인증 확인, 사입·수입 준비</p></div></li>
+              <li><span class="n">01</span><div><h4>시장 진입</h4><p>수입 등록(CDSCO) 요건 확인과 서류 준비</p></div></li>
               <li><span class="n">02</span><div><h4>현지 물류</h4><p>현지 창고 입고와 물류 운영</p></div></li>
               <li><span class="n">03</span><div><h4>판매 준비</h4><p>온라인·오프라인 채널 입점</p></div></li>
-              <li><span class="n">04</span><div><h4>현지 마케팅</h4><p>디지털과 오프라인 매체 기획·집행</p>
+              <li><span class="n">04</span><div><h4>현지 마케팅</h4><p>디지털과 오프라인 매체 <span class="nw">기획·집행</span></p>
                 <div class="media-types"><span>항공</span><span>교통</span><span>영화관</span><span>옥외</span><span>인쇄</span></div></div></li>
             </ol>
           </div>
@@ -708,6 +924,19 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
     </div>
   </section>
 
+  <!-- SAFE -->
+  <section class="safe" aria-labelledby="safe-t">
+    <div class="wrap">
+      <h2 id="safe-t">맡겨도, 브랜드가<br>쥐고 있는 것들</h2>
+      <p class="sub">대행사를 바꾸거나 계약이 끝나도 브랜드가 불편하지 않게 일해요.</p>
+      <div class="safe-grid">
+        <div class="sg"><h4>계정은 브랜드 명의</h4><p>Amazon·TikTok Shop 계정을 브랜드 이름으로 운영해요.</p></div>
+        <div class="sg"><h4>광고비는 직접 결제</h4><p>광고비는 대행료와 별도로 브랜드 카드로 결제하고, 내역을 언제든 확인해요.</p></div>
+        <div class="sg"><h4>한 일은 정기 공유</h4><p>무엇을 했고 다음에 무엇을 바꿀지 정기적으로 알려드려요.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="wrap faq-grid">
@@ -741,6 +970,7 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
             <details><summary>인도에 법인이 없어도 진출할 수 있나요?</summary><p>네. HANGUK SKIN이 인도 현지 법인으로 수입과 유통을 맡아요. 계약과 소통은 한국에서 한국어로 하시면 돼요.</p></details>
             <details><summary>인증이 꼭 필요한가요?</summary><p>화장품처럼 품목에 따라 수입 전에 현지 등록이 필요해요. 필요한 서류와 걸리는 시간은 품목마다 달라서, 제품 자료를 받고 가장 먼저 확인해요.</p></details>
             <details><summary>우리 제품이 인도에 맞는지 어떻게 알 수 있나요?</summary><p>제품 자료, 가격, 판매 이력, 인증 준비 상태를 먼저 함께 봐요. 기존 상품으로 시작할지, 인도에 맞는 상품을 기획할지도 이때 정해요.</p></details>
+            <p class="guide-links"><a href="/faq/">질문 전체 보기 →</a><a href="/amazon/">Amazon 입점 가이드 →</a><a href="/tiktok-shop/">TikTok Shop 가이드 →</a></p>
           </div>
         </div>
       </div>
@@ -783,12 +1013,22 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
   </section>
 </main>
 
+<div class="mbar" id="mbar" aria-label="빠른 상담">
+  <a class="btn btn-ink" href="#check" data-cta="mbar-check">1분 진출 진단</a>
+  <a class="kk" href="https://pf.kakao.com/_xdxohfX" target="_blank" rel="noopener" data-cta="mbar-kakao">카카오톡</a>
+</div>
+
 <footer>
   <div class="wrap">
     <div class="foot">
       <p><b>(주)케이글로우</b> · 서울특별시 강서구 공항대로61길 29, SBA 글로벌마케팅센터 2층 · 사업자등록번호 <span class="nw">345-88-03698</span></p>
       <p><b>Hanguk Skin Private Limited</b> · 7F, 703, Palm Court, Gurugram, Haryana 122007, India · CIN U46491HR2026PTC147722</p>
     </div>
+      <nav class="foot-links foot-guides" aria-label="가이드">
+        <a href="/amazon/">미국 Amazon 입점 가이드</a>
+        <a href="/tiktok-shop/">TikTok Shop 미국 진출 가이드</a>
+        <a href="/faq/">자주 묻는 질문</a>
+      </nav>
     <div class="foot-row">
       <nav class="foot-links" aria-label="채널과 정책">
         <a href="https://pf.kakao.com/_xdxohfX" target="_blank" rel="noopener">카카오톡</a>
@@ -958,6 +1198,63 @@ dialog::backdrop{background:rgba(8,12,20,.55);backdrop-filter:blur(3px)}
     document.getElementById('f-ftwz').style.width=(s*100)+'%';
   }
   [cv,cr,cs].forEach(function(el){ el.addEventListener('input',calc); }); calc();
+
+
+  // ===== v2: diagnosis =====
+  (function(){
+    var f=document.getElementById('checkform'); if(!f) return;
+    var ST={
+      us:{pre:['어느 채널로 시작할지 정해요 (Amazon · TikTok Shop)','리스팅과 계정을 브랜드 명의로 셋업해요','광고와 크리에이터를 작게 테스트해요'],
+          kr:['한국 판매 데이터로 미국에서 먼저 팔 제품을 골라요','리스팅과 가격 구조를 미국 기준으로 다시 짜요','광고와 크리에이터를 작게 테스트해요'],
+          abroad:['지금 계정과 광고 구조를 점검해요','새는 광고비와 놓친 검색어를 찾아요','효율이 확인된 것만 넓혀요']},
+      in:{pre:['제품 자료로 인도 수입 등록 요건부터 확인해요','HANGUK SKIN이 현지 수입자로 등록과 통관을 맡아요','온라인·오프라인 채널 입점을 준비해요'],
+          kr:['제품 자료로 인도 수입 등록 요건부터 확인해요','인도에 맞는 제품 구성과 가격을 함께 정해요','HANGUK SKIN이 통관과 현지 유통을 맡아요'],
+          abroad:['지금 제품의 인도 등록 요건을 확인해요','자유무역창고(FTWZ)로 자금이 덜 묶이는 수입 구조를 짜요','현지 채널과 마케팅을 기획해요']}
+    };
+    var TITLE={us:{pre:'미국, 채널 선택부터 차근차근',kr:'한국에서 검증된 제품으로 미국 첫걸음',abroad:'지금 운영을 점검하고 넓히기'},
+               in:{pre:'인도, 수입 등록 확인부터',kr:'한국 제품을 인도에 맞게',abroad:'인도 수입 구조부터 다시 짜기'}};
+    var FIRST={start:'첫 상담에서 시장과 채널 순서를 같이 정해요',ads:'광고 계정 구조와 검색어 데이터를 먼저 봐요',creator:'팔로워 수보다 우리 고객과 맞는 크리에이터를 먼저 찾아요',cert:'품목별 등록 서류와 통관 조건을 먼저 확인해요',plateau:'매출이 어디서 막혔는지 검색·리뷰·콘텐츠로 나눠서 봐요'};
+    var LAB={mk:{us:'미국',in:'인도',both:'미국·인도'},st:{pre:'아직 판매 전',kr:'한국에서만 판매 중',abroad:'이미 해외에서 판매 중'},cn:{start:'어디서부터 시작할지',ads:'광고 효율',creator:'크리에이터·콘텐츠',cert:'인증·통관',plateau:'매출 정체'}};
+    function val(n){var c=f.querySelector('input[name="'+n+'"]:checked');return c?c.value:'';}
+    function esc(t){return t.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+    function upd(){
+      var mk=val('mk'),st=val('st'),cn=val('cn'),steps,title;
+      if(mk==='both'){steps=[ST.us[st][0],ST.in[st][0],'두 시장의 순서와 예산 배분을 함께 정해요'];title='미국과 인도, 순서부터 함께';}
+      else{steps=ST[mk][st];title=TITLE[mk][st];}
+      document.getElementById('r-title').textContent=title;
+      document.getElementById('r-steps').innerHTML=steps.map(function(t,i){return '<li><b>'+(i+1)+'</b><span>'+esc(t)+'</span></li>';}).join('');
+      var ft=(cn==='cert'&&mk==='us')?'미국 판매에 필요한 요건을 첫 상담에서 함께 확인해요':FIRST[cn];
+      document.getElementById('r-first').innerHTML='<b>먼저 볼 것</b> · '+esc(ft);
+      var rb=document.querySelector('.result'); if(rb&&!matchMedia('(prefers-reduced-motion: reduce)').matches){rb.classList.remove('flash');void rb.offsetWidth;rb.classList.add('flash');}
+    }
+    f.addEventListener('change',upd); upd();
+    document.getElementById('r-go').addEventListener('click',function(){
+      var mk=val('mk'),st=val('st'),cn=val('cn');
+      var map={us:['t-amz'],in:['t-in'],both:['t-amz','t-in']}[mk]||[];
+      if(cn==='creator') map.push('t-cr');
+      document.querySelectorAll('input[name="topic"]').forEach(function(c){c.checked=false;});
+      map.forEach(function(id){var c=document.getElementById(id); if(c) c.checked=true;});
+      var m=document.getElementById('f-msg'); if(m && (!m.value.trim() || m.value.indexOf('[진출 진단]')===0)){ m.value='[진출 진단] 시장: '+LAB.mk[mk]+' / 단계: '+LAB.st[st]+' / 고민: '+LAB.cn[cn]; var d=m.closest('details'); if(d) d.open=true; }
+      track('cta_click',['trackCustom','CTAClick'],{cta:'check_result',market:mk});
+    });
+  })();
+
+  // ===== v2: worry ticker =====
+  (function(){
+    var el=document.getElementById('worry'); if(!el||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var W=['“Amazon에 올렸는데 주문이 거의 없어요”','“인플루언서를 써봤는데 매출로 안 이어져요”','“광고비는 나가는데 뭐가 먹히는지 모르겠어요”','“인도는 인증부터 어디서 시작하죠?”','“TikTok Shop, 지금 들어가도 늦지 않았을까요?”'], i=0;
+    setInterval(function(){ el.classList.add('out'); setTimeout(function(){ i=(i+1)%W.length; el.textContent=W[i]; el.classList.remove('out'); },350); },3200);
+  })();
+
+  // ===== v2: mobile sticky bar =====
+  (function(){
+    var bar=document.getElementById('mbar'), hero=document.querySelector('.hero'), contact=document.getElementById('contact');
+    if(!bar||!('IntersectionObserver' in window)) return;
+    var pastHero=false, atContact=false;
+    function set(){ bar.classList.toggle('on', pastHero && !atContact); }
+    new IntersectionObserver(function(e){ pastHero=!e[0].isIntersecting; set(); }).observe(hero);
+    new IntersectionObserver(function(e){ atContact=e[0].isIntersecting; set(); },{threshold:.15}).observe(contact);
+  })();
 
   // chapter CTA preselects topic
   document.querySelectorAll('[data-topic]').forEach(function(a){
