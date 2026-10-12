@@ -1,10 +1,12 @@
 # K-GLOW GROUP
 
+> 최종 업데이트: 2026-10-08
+>
 > K-GLOW GROUP(케이글로우 그룹)은 한국 브랜드의 해외 진출을 돕는 그룹이며, 시장별로 두 법인이 나눠서 일합니다. 미국 사업은 한국법인 K-GLOW(주식회사 케이글로우)가, 인도 사업은 인도 현지법인 HANGUK SKIN(Hanguk Skin Private Limited)이 맡습니다.
 
 ## 미국 · K-GLOW (한국법인)
-- Amazon, TikTok Shop 입점과 운영
-- Amazon 광고 운영
+- 아마존(Amazon)·틱톡샵(TikTok Shop) 미국 입점과 운영
+- 아마존 검색 광고(PPC) 운영, MoCRA 시설 등록·제품 리스팅 지원, 아마존 브랜드 레지스트리 신청 지원, 미국 물류(FBA·3PL) 연결
 - 미국 크리에이터(인플루언서) 마케팅: 팔로워 수보다 실제 고객층을 기준으로 선정
 - 아직 미국에서 판매하지 않는 브랜드도 입점 단계부터 함께함
 - 계정과 광고비는 브랜드 명의로 운영하고 집행 내역을 브랜드가 직접 확인
@@ -22,20 +24,37 @@
 - 웹사이트: https://www.kglowofficial.co.kr/
 - 문의: philip@kglowofficial.co.kr, 카카오톡 채널 https://pf.kakao.com/_xdxohfX
 - 주식회사 케이글로우: 사업자등록번호 345-88-03698, 서울특별시 강서구 공항대로61길 29, SBA 글로벌마케팅센터 2층
-- Hanguk Skin Private Limited: 7F, 703, Palm Court, Gurugram, Haryana 122007, India
-- LinkedIn: https://www.linkedin.com/in/koreabeauty
+- Hanguk Skin Private Limited(HANGUK SKIN, 한국스킨): CIN U46491HR2026PTC147722, 7F, 703, Palm Court, Gurugram, Haryana 122007, India
 - Instagram: https://www.instagram.com/k_onvoy/
 
 ## 사업 페이지
-- [미국 진출](https://www.kglowofficial.co.kr/us/): K-GLOW(한국법인)의 미국 Amazon·TikTok Shop 입점과 운영, 검색 광고, 크리에이터 마케팅, 진행 순서, 협업 방식
-- [인도 진출](https://www.kglowofficial.co.kr/india/): HANGUK SKIN(인도 현지법인)이 수입자로 CDSCO 등록, 통관, FTWZ 보관, 유통, 현지 마케팅을 실행
+- [미국 진출](https://www.kglowofficial.co.kr/us/): K-GLOW(한국법인)의 화장품 미국 진출 대행. 아마존·틱톡샵 입점과 운영, 검색 광고, 크리에이터 마케팅, MoCRA·브랜드 레지스트리 지원, 미국 물류 연결
+- [화장품 인도 진출](https://www.kglowofficial.co.kr/india/): HANGUK SKIN(인도 현지법인)이 수입자로 CDSCO 등록, 인도 라벨, 통관, FTWZ 보관, 유통, 현지 마케팅을 실행
 - [가이드 모음](https://www.kglowofficial.co.kr/guides/)
 - [1분 진출 진단](https://www.kglowofficial.co.kr/check/): 시장, 지금 단계, 가장 큰 고민 세 가지로 미국·인도 진출 순서를 안내하고 바로 상담을 요청하는 페이지
 
-## 가이드 페이지
-- [미국 Amazon 입점 가이드](https://www.kglowofficial.co.kr/amazon/): 판매자 계정, 상표와 브랜드 레지스트리, FDA MoCRA, 영문 라벨, FBA, 입점 후 매출을 만드는 4가지
-- [TikTok Shop 미국 진출 가이드](https://www.kglowofficial.co.kr/tiktok-shop/): 한국 법인 크로스보더 입점, 미국 내 물류, 크리에이터와 라이브 판매 구조
-- [화장품 인도 진출 가이드](https://www.kglowofficial.co.kr/india/): 인도 시장 흐름, 진출 5단계(진단, CDSCO 등록, 인도 라벨, 수입·FTWZ, 유통·마케팅), 자주 막히는 곳. 인도 현지법인 HANGUK SKIN(한국스킨)이 수입자로 실행
-- [인도 CDSCO 화장품 수입 등록 가이드](https://www.kglowofficial.co.kr/india/cdsco/): 신청 주체, COS-1·COS-2, 준비 서류, 수입 금지 조건, 인도 라벨 항목
-- [인도 화장품 유통 채널 가이드](https://www.kglowofficial.co.kr/india/distribution/): 뷰티몰(Nykaa 등), 종합 이커머스, 퀵커머스, 오프라인 매장 비교
+## 미국 가이드
+- [아마존 미국 입점 가이드](https://www.kglowofficial.co.kr/amazon/): 한국 화장품 브랜드의 아마존 미국 진출 가이드. 입점 준비 6가지(계정·브랜드 레지스트리·MoCRA·라벨·FBA·UPC), 2026년 바뀐 규칙, 입점·운영·광고 대행사 고르는 법을 정리했어요.
+- [틱톡샵 미국 진출 가이드](https://www.kglowofficial.co.kr/tiktok-shop/): 틱톡샵(TikTok Shop) 미국 진출 가이드. 한국 사업자 크로스보더 입점 조건, 미국 내 물류(3PL)와 2026년 배송 정책 변화, 크리에이터 판매 구조, FTC 협찬 표시, 대행사 고르는 법.
+- [아마존 화장품 MoCRA 가이드](https://www.kglowofficial.co.kr/amazon/mocra/): 아마존에서 화장품을 팔 때 필요한 MoCRA 시설 등록과 제품 리스팅, 미국 에이전트, 라벨 연락처, 아마존이 요청할 수 있는 서류를 FDA 원문 기준으로 정리했어요.
+- [아마존 브랜드 레지스트리 가이드](https://www.kglowofficial.co.kr/amazon/brand-registry/): 아마존 브랜드 레지스트리 신청 조건(출원 중·등록 상표, 로고 표시), 신청 순서, 2026년 3월 31일부터 바뀐 FBA 바코드 규칙까지 한국 브랜드 기준으로 정리했어요.
+- [아마존 vs 틱톡샵 비교](https://www.kglowofficial.co.kr/us/amazon-vs-tiktok-shop/): 아마존과 틱톡샵, 우리 화장품은 어디부터 시작할까요. 사는 방식, 입점 조건, 물류, 광고, 리뷰, 크리에이터 역할을 비교하고 함께 운영하는 방법을 정리했어요.
+
+## 인도 가이드
+- [화장품 인도 진출 가이드](https://www.kglowofficial.co.kr/india/): 한국 화장품 인도 수출, 무엇부터 할까요? 2025년 대인도 수출 실적, CDSCO 등록, 인도 라벨, 수입·FTWZ, Nykaa·퀵커머스 유통까지 실제 순서로 정리했어요.
+- [인도 CDSCO 화장품 등록 가이드](https://www.kglowofficial.co.kr/india/cdsco/): 인도 화장품 인증이라 부르는 CDSCO 수입 등록을 정리했어요. 누가 신청하는지, COS-1 서류 체크리스트, 심사 기한, 유효기간과 유지 수수료, 수입 금지 조건까지.
+- [인도 화장품 라벨 규정](https://www.kglowofficial.co.kr/india/label/): 인도에 수입하는 화장품 라벨에 꼭 들어갈 항목을 정리했어요. RC No., 수입자, MRP, 원산지, 고객 상담처, 스티커 부착, 2026년 9월 새로 나온 채식·비채식 점 표시까지.
+- [인도 화장품 시장](https://www.kglowofficial.co.kr/india/market/): 인도 뷰티 시장 규모와 2030년 전망, 온라인·퀵커머스 비중, 한국 화장품 대인도 수출 실적, 유망 품목을 출처와 함께 정리했어요. 2026년 10월 기준.
+- [인도 화장품 유통 채널 가이드](https://www.kglowofficial.co.kr/india/distribution/): 인도 화장품 유통 채널 가이드예요. 뷰티몰(Nykaa), 종합 이커머스(Amazon India), 퀵커머스, 오프라인의 차이와 채널 고르는 법, 유통 파트너 고르는 법을 정리했어요.
+
+## 용어
+- MoCRA: 미국 화장품 규제 현대화법. 화장품 제조시설 등록(2년마다 갱신)과 제품 리스팅(매년 갱신) 의무를 정함
+- 아마존 브랜드 레지스트리(Brand Registry): 상표(출원 중 포함)를 가진 브랜드가 아마존에서 브랜드를 보호하고 A+ 콘텐츠·브랜드 광고를 쓰게 하는 프로그램
+- CDSCO: 인도 의약품·화장품 규제기관. 수입 화장품은 COS-1 신청, COS-2 수입 등록증이 필요
+- RC No.: 인도 수입 등록번호. 인도 라벨에 표기
+- MRP: 인도 세금 포함 최대 소매가. 라벨 필수 표기
+- FTWZ: 인도 자유무역창고. 재고를 보관하다가 국내로 반출할 때 관세를 냄
+
+## 더 보기
+- [전체 요약(llms-full.txt)](https://www.kglowofficial.co.kr/llms-full.txt)
 - [자주 묻는 질문](https://www.kglowofficial.co.kr/faq/)
