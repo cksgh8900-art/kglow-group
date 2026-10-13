@@ -1019,6 +1019,164 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
 .tw-guides{margin-top:22px;justify-content:center}
 .tw-guides a{font-size:14px;padding:8px 14px}
 </style>
+<style id="mx-sub-css">
+/* ===== v8 하위 페이지 모션 (2026-10-13 시안) ===== */
+/* --- 히어로: 정지 지도 그림 → 움직이는 점 지도 --- */
+.gp-hero.dk{background-image:none!important}
+.gp-hero.dk>.mx-hbg,.gp-hero.dk>.mx-hmap,.gp-hero.dk>.mx-hshade{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.gp-hero.dk>.mx-hbg{background-image:var(--pg);background-size:cover;background-position:center bottom;background-repeat:no-repeat;z-index:0;transition:opacity 1s ease}
+.gp-hero.dk>.mx-hmap{z-index:0;opacity:0;transition:opacity 1.2s ease}
+.gp-hero.dk>.mx-hshade{z-index:1;background:linear-gradient(90deg,rgba(10,17,28,.92) 0%,rgba(10,17,28,.55) 42%,rgba(10,17,28,0) 72%)}
+.gp-hero.dk>.wrap{position:relative;z-index:2}
+.gp-hero.dk.mx-live>.mx-hbg{opacity:0}
+.gp-hero.dk.mx-live>.mx-hmap{opacity:1}
+@media (min-width:1100px){.gp-hero.dk .wrap>*:not(.gp-en):not(.crumb){max-width:min(600px,46vw)!important}}
+@media (max-width:760px){
+  .gp-hero.dk>.mx-hshade{background:linear-gradient(180deg,rgba(10,17,28,.7) 0%,rgba(10,17,28,.35) 55%,rgba(10,17,28,0) 100%)}
+}
+
+/* --- 제목·블록 드러남 --- */
+.mx-m{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.mx-i{display:inline-block;transition:transform .9s cubic-bezier(.16,.84,.24,1);transition-delay:calc(var(--i,0) * 70ms)}
+.mx-rv:not(.mx-on) .mx-i{transform:translateY(112%)}
+.mx-up{transition:opacity .8s ease,transform .8s cubic-bezier(.16,.84,.24,1);transition-delay:calc(var(--d,0) * 80ms)}
+.mx-up:not(.mx-on){opacity:0;transform:translateY(22px)}
+
+/* --- 핵심 요약 상자 --- */
+.gsum{position:relative;border:1px solid transparent!important;border-left-width:1px!important;border-radius:22px!important;padding:24px 26px!important;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(135deg,var(--blue),color-mix(in srgb,var(--blue) 25%,var(--line)) 45%,color-mix(in srgb,var(--gold) 30%,var(--line)) 70%,var(--gold)) border-box!important;
+  box-shadow:0 22px 50px -32px color-mix(in srgb,var(--blue) 70%,transparent)}
+.gdoc.in .gsum{background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(135deg,var(--gold),color-mix(in srgb,var(--gold) 25%,var(--line)) 50%,var(--blue)) border-box!important;box-shadow:0 22px 50px -32px color-mix(in srgb,var(--gold) 70%,transparent)}
+.gsum-h{display:inline-flex;align-items:center;gap:8px}
+.gsum-h::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 0 color-mix(in srgb,var(--blue) 50%,transparent);animation:mxpulse 2s ease-out infinite}
+.gdoc.in .gsum-h::before{background:var(--gold);box-shadow:0 0 0 0 color-mix(in srgb,var(--gold) 50%,transparent)}
+@keyframes mxpulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.gsum ul{list-style:none;padding-left:0!important}
+.gsum li{position:relative;padding-left:22px}
+.gsum li::before{content:"";position:absolute;left:2px;top:.7em;width:8px;height:8px;border-radius:2px;transform:rotate(45deg);background:linear-gradient(135deg,var(--blue),var(--gold))}
+
+/* --- 카드: 살짝 떠오름 --- */
+.gcards>li{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+.gcards>li:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--blue) 45%,var(--line));box-shadow:0 18px 40px -24px color-mix(in srgb,var(--blue) 60%,transparent)}
+.gdoc.in .gcards>li:hover{border-color:color-mix(in srgb,var(--gold) 50%,var(--line));box-shadow:0 18px 40px -24px color-mix(in srgb,var(--gold) 60%,transparent)}
+
+/* --- 단계 카드(01, 02 …) → 진행선 타임라인 --- */
+.gcards.mx-tl{grid-template-columns:minmax(0,1fr)!important;gap:0!important;position:relative;padding-left:64px!important;max-width:880px!important}
+.gcards.mx-tl::before,.gcards.mx-tl::after{content:"";position:absolute;left:23px;top:30px;bottom:30px;width:3px;border-radius:3px;background:var(--line)}
+.gcards.mx-tl::after{background:linear-gradient(180deg,var(--blue),var(--gold));transform-origin:top;transform:scaleY(0);transition:transform 3.2s cubic-bezier(.4,0,.2,1) .2s}
+.gcards.mx-tl.mx-run::after{transform:scaleY(1)}
+.gcards.mx-tl>li{grid-column:auto!important;background:none!important;border:0!important;box-shadow:none!important;transform:none!important;padding:16px 0 26px!important;border-radius:0!important}
+.gcards.mx-tl>li .k{position:absolute;left:0;width:49px;height:49px;margin-top:-6px;border-radius:50%!important;padding:0!important;display:grid!important;place-items:center;
+  font-family:var(--disp)!important;font-stretch:var(--disp-w);font-size:18px!important;font-weight:800;letter-spacing:0;
+  background:var(--surface)!important;border:2px solid var(--line);color:var(--ink3)!important;transition:background .4s,border-color .4s,color .4s,transform .4s;transition-delay:calc(var(--d,0) * 600ms + .2s)}
+.gcards.mx-tl.mx-run>li .k{background:linear-gradient(135deg,var(--blue),var(--gold))!important;border-color:transparent;color:#fff!important;transform:scale(1.06)}
+.gcards.mx-tl>li h3{font-size:clamp(19px,2vw,23px)!important}
+.gcards.mx-tl>li:hover{transform:none!important}
+
+/* /us/ 진행 단계(STEP 01~04) */
+.steps.mx-ws{position:relative}
+.steps.mx-ws>li .n{transition:color .4s;transition-delay:calc(var(--d,0) * 450ms)}
+.steps.mx-ws>li{transition:border-color .5s,box-shadow .5s,transform .5s;transition-delay:calc(var(--d,0) * 450ms)}
+.steps.mx-ws.mx-run>li{border-color:color-mix(in srgb,var(--blue) 55%,var(--line));box-shadow:0 18px 40px -26px color-mix(in srgb,var(--blue) 70%,transparent)}
+.steps.mx-ws>li::after{content:"";position:absolute;left:22px;right:22px;top:0;height:3px;border-radius:0 0 3px 3px;background:linear-gradient(90deg,var(--blue),var(--gold));transform-origin:left;transform:scaleX(0);transition:transform .7s cubic-bezier(.4,0,.2,1);transition-delay:calc(var(--d,0) * 450ms)}
+.steps.mx-ws.mx-run>li::after{transform:scaleX(1)}
+
+/* --- 표 안 숫자 막대 (A → B) --- */
+.mx-bars{display:grid;gap:5px;margin-top:8px;max-width:260px}
+.mx-bar{height:8px;border-radius:8px;background:color-mix(in srgb,var(--line) 70%,transparent);overflow:hidden}
+.mx-bar i{display:block;height:100%;width:var(--w);border-radius:8px;transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0) * 120ms + .15s)}
+.mx-bar.b i{background:var(--ink3);opacity:.55}
+.mx-bar.a i{background:linear-gradient(90deg,var(--blue),var(--gold))}
+.gdoc.in .mx-bar.a i{background:linear-gradient(90deg,#C78A2C,var(--gold-bright,#EFC45C))}
+.mx-bars.mx-on .mx-bar i{transform:scaleX(1)}
+
+/* --- 가이드: 목차 띠(메뉴 아래 고정) + 읽기 진행선 --- */
+.mx-tocbar{position:fixed;left:0;right:0;top:64px;z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line);transform:translateY(-110%);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s}
+.mx-tocbar.on{transform:none;opacity:1;pointer-events:auto}
+.mx-tocbar ol{list-style:none;margin:0 auto;padding:8px clamp(16px,4vw,40px);max-width:1200px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.mx-tocbar ol::-webkit-scrollbar{display:none}
+.mx-tocbar a{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;white-space:nowrap;font-size:13.5px;font-weight:700;color:var(--ink2);text-decoration:none;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s}
+.mx-tocbar a:hover{color:var(--ink);background:var(--surface);border-color:var(--line)}
+.mx-tocbar a.cur{color:#fff;background:var(--navy,#0F1724);border-color:transparent}
+.mx-tocbar a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.mx-tocbar .mx-prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--gold))}
+:root:not([data-theme="light"]) .mx-tocbar a.cur{background:var(--ink);color:var(--bg)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mx-tocbar a.cur{background:var(--navy,#0F1724);color:#fff}}
+
+/* --- 섹션 번호 --- */
+.mx-sn{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ink3);margin-bottom:-6px}
+.mx-sn b{color:var(--blue-ink);font-weight:800}
+.gdoc.in .mx-sn b{color:var(--gold-ink)}
+.mx-sn i{display:block;width:44px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--blue),var(--gold))}
+
+/* --- 주의 목록: 경고 카드 --- */
+.gbul.mx-warn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px!important;padding-left:0!important}
+.gbul.mx-warn>li{padding:18px 18px 18px 58px!important;background:var(--surface);border:1px solid var(--line);border-radius:18px;line-height:1.65;transition:transform .3s,box-shadow .3s}
+.gbul.mx-warn>li:hover{transform:translateY(-3px);box-shadow:0 16px 36px -24px rgba(0,0,0,.4)}
+.gbul.mx-warn>li::before{content:"!"!important;left:16px!important;top:16px!important;width:28px!important;height:28px!important;border-radius:9px!important;display:grid;place-items:center;
+  font:900 15px/1 var(--disp);color:#fff;background:linear-gradient(135deg,#E8913A,#C2571F)!important}
+.gbul.mx-warn>li b{display:block;color:var(--ink);font-size:16.5px;margin-bottom:2px}
+@media (max-width:760px){.gbul.mx-warn{grid-template-columns:minmax(0,1fr)}}
+
+/* --- 체크리스트: 차례로 체크 --- */
+.gbul.mx-check{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important;padding-left:0!important}
+.gbul.mx-check>li{padding:16px 18px 16px 56px!important;background:var(--surface);border:1px solid var(--line);border-radius:16px;line-height:1.6;transition:border-color .4s;transition-delay:calc(var(--d,0) * 180ms + .2s)}
+.gbul.mx-check>li::before{left:16px!important;top:15px!important;width:24px!important;height:24px!important;border-radius:7px!important;background:var(--bg)!important;border:2px solid var(--line);transition:background .35s,border-color .35s;transition-delay:calc(var(--d,0) * 180ms + .2s)}
+.gbul.mx-check>li::after{content:"";position:absolute;left:24px;top:20px;width:7px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(var(--d,0) * 180ms + .35s)}
+.gbul.mx-check.mx-run>li{border-color:color-mix(in srgb,var(--blue) 40%,var(--line))}
+.gbul.mx-check.mx-run>li::before{background:linear-gradient(135deg,var(--blue),var(--gold))!important;border-color:transparent}
+.gbul.mx-check.mx-run>li::after{transform:rotate(45deg) scale(1)}
+.gdoc.in .gbul.mx-check.mx-run>li{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.gbul.mx-check>li b{color:var(--ink)}
+@media (max-width:760px){.gbul.mx-check{grid-template-columns:minmax(0,1fr)}}
+
+/* --- 일반 목록: 마름모 점 --- */
+.gbul.mx-dots>li::before{border-radius:2px!important;transform:rotate(45deg);background:linear-gradient(135deg,var(--blue),var(--gold))!important}
+
+/* --- 용어 정리: 카드 --- */
+.gdl.mx-terms{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))!important;gap:12px!important}
+.gdl.mx-terms>div{border-radius:18px!important;padding:18px 18px 16px!important;transition:transform .3s,border-color .3s,box-shadow .3s}
+.gdl.mx-terms>div:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--blue) 45%,var(--line));box-shadow:0 16px 36px -26px color-mix(in srgb,var(--blue) 70%,transparent)}
+.gdoc.in .gdl.mx-terms>div:hover{border-color:color-mix(in srgb,var(--gold) 50%,var(--line));box-shadow:0 16px 36px -26px color-mix(in srgb,var(--gold) 70%,transparent)}
+.gdl.mx-terms dt{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;font-family:var(--mono);font-size:13px;letter-spacing:.02em;background:var(--blue-soft);color:var(--blue-ink)!important}
+.gdoc.in .gdl.mx-terms dt{background:var(--gold-soft);color:var(--gold-ink)!important}
+.gdl.mx-terms dd{margin-top:10px!important}
+
+/* --- 표: 맡는 쪽 칩, 숫자 막대 --- */
+.mx-chip{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:700;font-size:13.5px;line-height:1.5;background:color-mix(in srgb,var(--line) 60%,transparent);color:var(--ink)}
+.mx-chip.kr{background:var(--blue-soft);color:var(--blue-ink)}
+.mx-chip.in{background:var(--gold-soft);color:var(--gold-ink)}
+.mx-chip.both{background:linear-gradient(90deg,var(--blue-soft),var(--gold-soft));color:var(--ink)}
+.mx-bar.c i{background:linear-gradient(90deg,color-mix(in srgb,var(--ink3) 60%,transparent),var(--ink3))}
+.gtable tr.mx-hl td{color:var(--ink)!important;font-weight:800;background:color-mix(in srgb,var(--gold-soft) 70%,transparent)}
+
+/* --- 함께하는 방법: 패널 --- */
+.gdoc section.mx-svc{position:relative;max-width:none!important;padding:clamp(24px,4vw,40px);border-radius:28px;overflow:hidden;
+  background:radial-gradient(70% 120% at 100% 0%,color-mix(in srgb,var(--blue) 14%,transparent),transparent 60%),var(--surface);border:1px solid var(--line)}
+.gdoc.in section.mx-svc{background:radial-gradient(70% 120% at 100% 0%,color-mix(in srgb,var(--gold) 18%,transparent),transparent 60%),var(--surface)}
+.gdoc section.mx-svc>p:not(.gnote){font-size:clamp(16.5px,1.6vw,19px);color:var(--ink);max-width:46em}
+
+/* --- 근거와 출처 --- */
+.gsrc ol{counter-reset:src;list-style:none;padding-left:0!important}
+.gsrc ol li{counter-increment:src;position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--line)}
+.gsrc ol li::before{content:counter(src,decimal-leading-zero);position:absolute;left:0;top:10px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink3)}
+
+/* --- 하단 문의 띠: 빛 다발 --- */
+.gcta>.mx-gfib{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.95}
+.gcta>*:not(.mx-gfib){position:relative;z-index:1}
+
+/* --- /us/ 띠 문장 --- */
+.band .big.mx-rv .mx-m{display:block}
+
+@media (prefers-reduced-motion: reduce){
+  .gbul.mx-check>li,.gbul.mx-check>li::before,.gbul.mx-check>li::after,.mx-i,.mx-up,.mx-bar i,.gcards.mx-tl::after,.gcards.mx-tl>li .k,.steps.mx-ws>li,.steps.mx-ws>li::after{transition:none!important}
+  .mx-rv:not(.mx-on) .mx-i{transform:none}
+  .mx-up:not(.mx-on){opacity:1;transform:none}
+  .gsum-h::before{animation:none}
+}
+
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -1035,7 +1193,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
   </div>
 </header>
 <main id="top">
-  <section class="gp-hero dk mk-us"><div class="wrap">
+  <section class="gp-hero dk mk-us"><div class="mx-hbg" aria-hidden="true"></div><canvas class="mx-hmap" aria-hidden="true"></canvas><div class="mx-hshade" aria-hidden="true"></div><div class="wrap">
     <nav class="crumb" aria-label="위치"><a href="/">홈</a><span>/</span><a href="/us/">미국 진출</a><span>/</span><a href="/amazon/">아마존 입점 가이드</a><span>/</span><span>아마존 브랜드 레지스트리 가이드</span></nav>
     <p class="gp-en">OWN YOUR <em>BRAND.</em></p>
     <h1>아마존 브랜드 레지스트리, 상표 출원 중에도 신청할 수 있나요</h1>
@@ -1172,6 +1330,213 @@ else if(h.indexOf('/check/')===0){try{gtag('event','cta_click',{cta:h,page:locat
   var gh=document.querySelector('.gp-hero.dk');
   if(gh){var ah=function(){document.body.classList.toggle('at-hero',gh.getBoundingClientRect().bottom>64);};addEventListener('scroll',ah,{passive:true});ah();}
 })();
+</script>
+<script id="mx-sub-js">
+(function(){
+  var d=document,de=d.documentElement;
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MOB=matchMedia('(max-width: 760px)').matches;
+  var DPR=Math.min(window.devicePixelRatio||1,MOB?1.5:2);
+  var IO='IntersectionObserver' in window;
+  function css(n){return getComputedStyle(de).getPropertyValue(n).trim();}
+  function hex(h){h=(h||'#888').replace('#','');if(h.length===3)h=h.split('').map(function(c){return c+c;}).join('');var n=parseInt(h,16);return [n>>16&255,n>>8&255,n&255];}
+  function rgb(c){return c[0]+','+c[1]+','+c[2];}
+  function mix(a,b,t){return [Math.round(a[0]+(b[0]-a[0])*t),Math.round(a[1]+(b[1]-a[1])*t),Math.round(a[2]+(b[2]-a[2])*t)];}
+  function fit(cv,k){k=k||DPR;var r=cv.getBoundingClientRect();var w=Math.max(1,Math.round(r.width*k)),h=Math.max(1,Math.round(r.height*k));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;}return [w,h];}
+  function once(el,cb,opt){if(!IO){cb();return;}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){o.disconnect();cb();}});},opt||{threshold:.25});o.observe(el);}
+  var below=function(el){return el.getBoundingClientRect().top>innerHeight*.92;};
+
+  // ---- 애니메이션 루프: 보이는 캔버스만 그림 ----
+  var items=[],raf=0,last=0;
+  function frame(ts){raf=0;var dt=Math.min(.05,(ts-(last||ts))/1000);last=ts;var any=false;
+    items.forEach(function(o){if(o.vis){any=true;var gap=ts-(o.lt||0);if(o.minDt&&gap<o.minDt)return;o.draw(ts/1000,Math.min(.05,o.lt?gap/1000:dt));o.lt=ts;}});
+    if(any&&!RM)raf=requestAnimationFrame(frame);else last=0;}
+  function kick(){if(!raf)raf=requestAnimationFrame(frame);}
+  function reg(o){items.push(o);o.resize();
+    if(IO){new IntersectionObserver(function(es){es.forEach(function(e){o.vis=e.isIntersecting;if(o.vis){o.resize();kick();}});},{rootMargin:'60px'}).observe(o.el);}else{o.vis=true;kick();}}
+  var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){items.forEach(function(o){o.resize();});kick();},150);});
+
+  var BLUE=[109,140,255],GOLD=[215,163,76],WHITE=[238,241,246],DOT=[176,184,198];
+
+  // ---- 1. 히어로: 움직이는 점 지도 ----
+  var hero=d.querySelector('.gp-hero.dk'),hc=hero&&hero.querySelector('.mx-hmap');
+  if(hc){
+    var mk=hero.classList.contains('mk-in')?'in':hero.classList.contains('mk-us')?'us':'all';
+    var VIEW={us:[118,296,60,12],in:[60,140,46,0],all:[60,296,60,0]}[mk];
+    var PL={kr:[37.57,126.98],us:[38.5,-98.5],in:[28.46,77.03]};
+    var CITY={us:[[34.05,-118.24],[40.71,-74.0],[41.88,-87.63],[32.78,-96.8],[47.6,-122.3],[33.75,-84.39],[25.76,-80.19]],
+              in:[[19.08,72.88],[12.97,77.59],[22.57,88.36],[17.39,78.49],[13.08,80.27],[23.02,72.57],[26.91,75.79]]};
+    var MK=mk==='all'?['in','us']:[mk];
+    var hg=hc.getContext('2d'),HW=1,HH=1,LAT=null,LON=null,pts=null,map={},mx=.5,my=.5,pmx=.5,pmy=.5,t0=0,live=false;
+    var ulon=function(lo){return lo<VIEW[0]-20?lo+360:lo;};
+    var layout=function(){var desk=HW/DPR>760,hr=hero.getBoundingClientRect(),tR=0,tB=0;
+      // 글자 영역(큰 영어 제목 제외)을 피해서 지도를 둠
+      [].forEach.call(hero.querySelectorAll('.wrap>*:not(.gp-en)'),function(el){var rg=d.createRange();rg.selectNodeContents(el);var r=rg.getBoundingClientRect();if(!r.width)return;tR=Math.max(tR,r.right-hr.left);tB=Math.max(tB,r.bottom-hr.top);});
+      tR*=DPR;tB*=DPR;var rx,ry,rw,rh;
+      var en=hero.querySelector('.gp-en'),enB=en?(en.getBoundingClientRect().bottom-hr.top)*DPR:0;
+      if(desk){rx=Math.max(tR+36*DPR,HW*.5);rw=HW-rx-12*DPR;ry=Math.max(HH*.14,enB+18*DPR);rh=HH-ry-HH*.06;}
+      else{rx=8*DPR;rw=HW-16*DPR;ry=tB+14*DPR;rh=Math.max(60*DPR,HH-ry-10*DPR);}
+      var lw=VIEW[1]-VIEW[0],lh=VIEW[2]-VIEW[3],sc=Math.min(rw/lw,rh/lh);
+      map={sc:sc,x0:rx+(rw-lw*sc)/2,y0:ry+(rh-lh*sc)/2,rx:rx,ry:ry,rw:rw,rh:rh,desk:desk};
+      if(LAT){pts=[];var gs=Math.max(1.4*DPR,Math.min(3.2*DPR,sc*.62));map.gs=gs;
+        for(var i=0;i<LAT.length;i++){var lo=ulon(LON[i]),la=LAT[i];if(lo<VIEW[0]||lo>VIEW[1]||la>VIEW[2]||la<VIEW[3])continue;
+          var w=0,c=null;MK.forEach(function(k){var p=PL[k],dl=Math.hypot(la-p[0],(lo-ulon(p[1]))*Math.cos(la*Math.PI/180)),r=k==='us'?22:13,v=Math.max(0,1-dl/r);if(v>w){w=v;c=k;}});
+          pts.push(xy(la,lo),w,c,(i*7)%4);}}};
+    var xy=function(la,lo){return [map.x0+(ulon(lo)-VIEW[0])*map.sc,map.y0+(VIEW[2]-la)*map.sc];};
+    var curve=function(a,b,lift){var p0=xy(a[0],a[1]),p1=xy(b[0],b[1]),mxp=(p0[0]+p1[0])/2,myp=(p0[1]+p1[1])/2,dx=p1[0]-p0[0],dy=p1[1]-p0[1],L=Math.hypot(dx,dy);
+      return {p0:p0,p1:p1,c:[mxp+dy/L*0*L,myp-L*lift],L:L};};
+    var qpt=function(cv,t){var u=1-t;return [u*u*cv.p0[0]+2*u*t*cv.c[0]+t*t*cv.p1[0],u*u*cv.p0[1]+2*u*t*cv.c[1]+t*t*cv.p1[1]];};
+    var CHIP={us:['K-GLOW','아마존 · 틱톡샵'],in:['HANGUK SKIN','등록 · 수입 · 유통']};
+    function rr(x,y,w,h,r){hg.beginPath();hg.moveTo(x+r,y);hg.arcTo(x+w,y,x+w,y+h,r);hg.arcTo(x+w,y+h,x,y+h,r);hg.arcTo(x,y+h,x,y,r);hg.arcTo(x,y,x+w,y,r);hg.closePath();}
+    var draw=function(t){if(!pts)return;if(!t0)t0=t;var el=RM?9:t-t0,intro=Math.min(1,el/1.8);
+      pmx+=(mx-pmx)*.06;pmy+=(my-pmy)*.06;var ox=(pmx-.5)*-14*DPR,oy=(pmy-.5)*-8*DPR;
+      hg.clearRect(0,0,HW,HH);hg.save();hg.translate(ox,oy);
+      // 점 지도(네 묶음으로 반짝임)
+      var gs=map.gs;
+      for(var g=0;g<4;g++){hg.beginPath();for(var i=0;i<pts.length;i+=4){if(pts[i+3]!==g)continue;var p=pts[i];hg.rect(p[0]-gs/2,p[1]-gs/2,gs,gs);}
+        hg.fillStyle='rgb('+rgb(DOT)+')';hg.globalAlpha=(.20+.07*Math.sin(t*1.1+g*1.57))*intro;hg.fill();}
+      // 시장 주변 강조
+      for(var j=0;j<pts.length;j+=4){var w=pts[j+1];if(w<=0)continue;var q=pts[j],col=pts[j+2]==='us'?BLUE:GOLD;hg.fillStyle='rgb('+rgb(col)+')';hg.globalAlpha=Math.min(1,w*1.1)*.85*intro;hg.fillRect(q[0]-gs/2,q[1]-gs/2,gs,gs);}
+      hg.globalAlpha=1;hg.lineCap='round';
+      MK.forEach(function(k,ki){var col=k==='us'?BLUE:GOLD,hub=PL[k];
+        // 시장 안 도시 연결
+        CITY[k].forEach(function(cy,ci){var cv=curve(hub,cy,.18),seg=Math.max(0,Math.min(1,(el-1.4-ci*.12)/.6));if(seg<=0)return;
+          hg.strokeStyle='rgba('+rgb(col)+',.38)';hg.lineWidth=1*DPR;hg.beginPath();hg.moveTo(cv.p0[0],cv.p0[1]);for(var s=1;s<=16*seg;s++){var pp=qpt(cv,s/16);hg.lineTo(pp[0],pp[1]);}hg.stroke();
+          if(RM)return;var cyc=((t/3.2)+ci/7)%1;
+          if(cyc<.5){var pp2=qpt(cv,cyc/.5);hg.fillStyle='rgb('+rgb(col)+')';hg.beginPath();hg.arc(pp2[0],pp2[1],2*DPR,0,6.2832);hg.fill();}
+          else{var qq=(cyc-.5)/.5;hg.globalAlpha=1-qq;hg.strokeStyle='rgb('+rgb(col)+')';hg.lineWidth=1.3*DPR;hg.beginPath();hg.arc(cv.p1[0],cv.p1[1],(2+qq*11)*DPR,0,6.2832);hg.stroke();hg.globalAlpha=1;}
+          hg.fillStyle='rgb('+rgb(col)+')';hg.beginPath();hg.arc(cv.p1[0],cv.p1[1],1.8*DPR,0,6.2832);hg.fill();});
+        // 서울 → 시장 큰 경로
+        var cv=curve(PL.kr,hub,k==='us'?.32:.28),N=80,dr=Math.max(0,Math.min(1,(el-.3-ki*.25)/1.3));
+        var gr=hg.createLinearGradient(cv.p0[0],cv.p0[1],cv.p1[0],cv.p1[1]);gr.addColorStop(0,'rgba('+rgb(WHITE)+',.85)');gr.addColorStop(1,'rgba('+rgb(col)+',.95)');
+        hg.strokeStyle=gr;hg.lineWidth=2.2*DPR;hg.beginPath();hg.moveTo(cv.p0[0],cv.p0[1]);for(var s2=1;s2<=N*dr;s2++){var p3=qpt(cv,s2/N);hg.lineTo(p3[0],p3[1]);}hg.stroke();
+        hg.globalAlpha=.18;hg.lineWidth=9*DPR;hg.stroke();hg.globalAlpha=1;
+        if(!RM&&dr>=1){for(var m=0;m<3;m++){var hd=((t*.2)+m/3+ki*.17)%1;for(var tr=0;tr<12;tr++){var tt=hd-tr*.008;if(tt<0)continue;var p4=qpt(cv,tt);hg.globalAlpha=(1-tr/12);hg.fillStyle='rgb('+rgb(tr<2?WHITE:col)+')';hg.beginPath();hg.arc(p4[0],p4[1],(3-tr*.15)*DPR,0,6.2832);hg.fill();}}hg.globalAlpha=1;}
+        // 시장 핀 + 칩
+        var hp=cv.p1,ph=RM?0:(t*.6+ki*.4)%1;
+        hg.globalAlpha=(1-ph)*.85*intro;hg.strokeStyle='rgb('+rgb(col)+')';hg.lineWidth=1.6*DPR;hg.beginPath();hg.arc(hp[0],hp[1],(7+ph*24)*DPR,0,6.2832);hg.stroke();hg.globalAlpha=intro;
+        hg.fillStyle='rgb('+rgb(col)+')';hg.beginPath();hg.arc(hp[0],hp[1],6*DPR,0,6.2832);hg.fill();hg.fillStyle='#0A111C';hg.beginPath();hg.arc(hp[0],hp[1],2.4*DPR,0,6.2832);hg.fill();
+        var ch=CHIP[k],f1=13*DPR,f2=11.5*DPR,pad=10*DPR;hg.font='800 '+f1+'px "Pretendard Variable",system-ui,sans-serif';var w1=hg.measureText(ch[0]).width;hg.font='600 '+f2+'px "Pretendard Variable",system-ui,sans-serif';var w2=hg.measureText(ch[1]).width;
+        var cw=Math.max(w1,w2)+pad*2+12*DPR,chh=44*DPR,bx=hp[0]+16*DPR,by=hp[1]+16*DPR;if(bx+cw>HW-8*DPR)bx=hp[0]-16*DPR-cw;if(bx<map.rx)bx=Math.max(map.rx,hp[0]-cw/2);if(by+chh>HH-6*DPR)by=hp[1]-chh-16*DPR;
+        var ca=Math.max(0,Math.min(1,(el-1.6-ki*.25)/.6));hg.globalAlpha=ca;hg.fillStyle='rgba(15,23,36,.88)';rr(bx,by,cw,chh,11*DPR);hg.fill();hg.strokeStyle='rgba('+rgb(col)+',.75)';hg.lineWidth=1.2*DPR;hg.stroke();
+        hg.fillStyle='rgb('+rgb(col)+')';hg.beginPath();hg.arc(bx+pad+3*DPR,by+15*DPR,3.2*DPR,0,6.2832);hg.fill();hg.textBaseline='middle';
+        hg.fillStyle='rgb('+rgb(WHITE)+')';hg.font='800 '+f1+'px "Pretendard Variable",system-ui,sans-serif';hg.fillText(ch[0],bx+pad+12*DPR,by+15*DPR);
+        hg.fillStyle='#B0B8C6';hg.font='600 '+f2+'px "Pretendard Variable",system-ui,sans-serif';hg.fillText(ch[1],bx+pad+12*DPR,by+31*DPR);hg.globalAlpha=1;});
+      // 서울 핀
+      var sp=xy(PL.kr[0],PL.kr[1]),sph=RM?0:(t*.6+.7)%1;hg.globalAlpha=(1-sph)*.8;hg.strokeStyle='#fff';hg.lineWidth=1.5*DPR;hg.beginPath();hg.arc(sp[0],sp[1],(6+sph*18)*DPR,0,6.2832);hg.stroke();
+      hg.globalAlpha=1;hg.fillStyle='#fff';hg.beginPath();hg.arc(sp[0],sp[1],5*DPR,0,6.2832);hg.fill();
+      hg.font='700 '+(11*DPR)+'px "JetBrains Mono",ui-monospace,monospace';hg.fillStyle='rgba(238,241,246,.85)';hg.textBaseline='middle';hg.fillText('SEOUL',sp[0]+10*DPR,sp[1]+14*DPR);
+      hg.restore();
+      if(!live){live=true;hero.classList.add('mx-live');}
+    };
+    var land=fetch('/mx-land.txt').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(tx){var b=atob(tx.trim()),u=new Uint8Array(b.length);for(var k=0;k<b.length;k++)u[k]=b.charCodeAt(k);
+      var I=new Int16Array(u.buffer),n=I.length/2;LAT=new Float32Array(n);LON=new Float32Array(n);for(var i=0;i<n;i++){LAT[i]=I[i*2]/10;LON[i]=I[i*2+1]/10;}});
+    var start=function(){land.then(function(){reg({el:hc,minDt:MOB?32:0,resize:function(){var s=fit(hc);HW=s[0];HH=s[1];layout();},draw:draw});}).catch(function(){});};
+    if(d.readyState==='complete')setTimeout(start,150);else addEventListener('load',function(){setTimeout(start,150);});
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;my=(e.clientY-r.top)/r.height;},{passive:true});
+  }
+
+  // ---- 2. 제목 드러남(화면 아래쪽에 있는 제목만) ----
+  function wrapWords(el,start){var i=start||0;
+    (function walk(node){[].slice.call(node.childNodes).forEach(function(c){
+      if(c.nodeType===3){var parts=c.textContent.split(/(\s+)/),fr=d.createDocumentFragment();
+        parts.forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){fr.appendChild(d.createTextNode(p));return;}
+          var m=d.createElement('span');m.className='mx-m';var inn=d.createElement('span');inn.className='mx-i';inn.style.setProperty('--i',i++);inn.textContent=p;m.appendChild(inn);fr.appendChild(m);});
+        c.parentNode.replaceChild(fr,c);}
+      else if(c.nodeType===1&&c.tagName!=='BR'&&!c.classList.contains('mx-m'))walk(c);});})(el);}
+  if(IO&&!RM){
+    [].forEach.call(d.querySelectorAll('.gdoc section>h2, .gx>h2, .safe h2, .process h3, .us-refs h2, .chapter .copy h3'),function(h){if(!below(h))return;wrapWords(h);h.classList.add('mx-rv');once(h,function(){h.classList.add('mx-on');},{threshold:.2});});
+    [].forEach.call(d.querySelectorAll('.band .big'),function(b){if(!below(b))return;[].slice.call(b.children).forEach(function(sp,k){var m=d.createElement('span');m.className='mx-m';var inn=d.createElement('span');inn.className='mx-i';inn.style.setProperty('--i',k*2);b.insertBefore(m,sp);inn.appendChild(sp);m.appendChild(inn);});b.classList.add('mx-rv');once(b,function(){b.classList.add('mx-on');});});
+    // 블록 떠오름
+    [].forEach.call(d.querySelectorAll('.gcards:not(.mx-tl)>li, .gdl>div, .safe-grid>*, .rf-cards>li, .gtw, .gsum, .gdoc .feature, .chapter .feature'),function(el){if(!below(el))return;var sib=el.parentNode?[].indexOf.call(el.parentNode.children,el):0;el.style.setProperty('--d',Math.min(sib,5));el.classList.add('mx-up');once(el,function(){el.classList.add('mx-on');},{threshold:.12});});
+    // 빠르게 건너뛴(목차 점프·End 키) 블록도 지나간 건 바로 보이게
+    var swT=0;function sweep(){swT=0;var q=d.querySelectorAll('.mx-up:not(.mx-on),.mx-rv:not(.mx-on),.mx-bars:not(.mx-on)');if(!q.length){removeEventListener('scroll',onSw);return;}
+      for(var k=0;k<q.length;k++){if(q[k].getBoundingClientRect().top<innerHeight*.85)q[k].classList.add('mx-on');}}
+    function onSw(){if(!swT)swT=setTimeout(sweep,180);}
+    addEventListener('scroll',onSw,{passive:true});
+  }
+
+  // ---- 3. 단계 카드 → 타임라인 ----
+  [].forEach.call(d.querySelectorAll('.gdoc ol.gcards'),function(ol){var lis=[].slice.call(ol.children);if(lis.length<3)return;
+    var num=lis.every(function(li){var k=li.querySelector('.k');return k&&/^\d{1,2}$/.test(k.textContent.trim());});if(!num)return;
+    ol.classList.add('mx-tl');lis.forEach(function(li,k){li.style.setProperty('--d',k*(3.2/lis.length/.6));});
+    if(RM)ol.classList.add('mx-run');else once(ol,function(){ol.classList.add('mx-run');},{threshold:.2});});
+  [].forEach.call(d.querySelectorAll('ol.steps'),function(ol){if(!ol.querySelector('li .n'))return;ol.classList.add('mx-ws');[].forEach.call(ol.children,function(li,k){li.style.setProperty('--d',k);});
+    if(RM)ol.classList.add('mx-run');else once(ol,function(){ol.classList.add('mx-run');},{threshold:.3});});
+
+  // ---- 4. 표 안 숫자 막대 (A → B) ----
+  function num(s){s=s.replace(/약|\s|,|\(잠정\)/g,'');var m=s.match(/(\d+(?:\.\d+)?)(?:~(\d+(?:\.\d+)?))?(만|억|%|크로르)?/);if(!m)return null;var v=parseFloat(m[1]);if(m[2])v=(v+parseFloat(m[2]))/2;
+    var u=m[3]||'';if(!u&&/달러|\$/.test(s))u='$';return {v:v*(u==='억'?10000:1),u:u==='억'||u==='만'?'amt':u};}
+  function bars(td,pairs,d0){var box=d.createElement('span');box.className='mx-bars';box.setAttribute('aria-hidden','true');
+    box.innerHTML=pairs.map(function(p,k){return '<span class="mx-bar '+p[1]+'"><i style="--w:'+Math.max(3,p[0]).toFixed(1)+'%;--d:'+((d0||0)+k)+'"></i></span>';}).join('');
+    td.appendChild(box);if(RM)box.classList.add('mx-on');else once(box,function(){box.classList.add('mx-on');},{threshold:.6});}
+  [].forEach.call(d.querySelectorAll('.gtable'),function(tb){var rows=[].slice.call(tb.querySelectorAll('tbody tr'));if(rows.length<2)return;
+    var grid=rows.map(function(r){return [].slice.call(r.children).map(function(td){var t=td.textContent;if(t.indexOf('→')>=0)return null;var n=num(t);return n&&n.u?n:null;});});
+    var nc=grid[0].length,numCols=[];for(var c=1;c<nc;c++){var ok=grid.filter(function(r){return r[c];}).length;if(ok>=Math.max(2,Math.ceil(rows.length*.6)))numCols.push(c);}
+    if(numCols.length===1&&rows.length>=3){var c1=numCols[0],u=null,vals=grid.map(function(r){return r[c1];}),same=vals.every(function(v){if(!v)return false;if(u===null)u=v.u;return v.u===u;});
+      if(same){var mx=Math.max.apply(null,vals.map(function(v){return v.v;}));rows.forEach(function(r,k){var td=r.children[c1];var hl=/한국/.test(r.textContent)&&/국가|지역/.test(tb.textContent);if(hl)r.classList.add('mx-hl');bars(td,[[vals[k].v/mx*100,hl?'a':'c']],k);});tb.classList.add('mx-tbars');}}
+    else if(numCols.length===2&&numCols[1]===numCols[0]+1){rows.forEach(function(r,k){var a=grid[k][numCols[0]],b=grid[k][numCols[1]];if(!a||!b||a.u!==b.u||b.v<=a.v)return;bars(r.children[numCols[1]],[[a.v/b.v*100,'b'],[100,'a']],k);});}
+  });
+
+  [].forEach.call(d.querySelectorAll('.gtable td'),function(td){var tx=td.textContent;if(tx.indexOf('→')<0)return;var sp=tx.split('→');if(sp.length!==2)return;
+    var a=num(sp[0]),b=num(sp[1]);if(!a||!b||a.u!==b.u||b.v<=a.v)return;if(!a.u&&!/\$/.test(tx))return;
+    var box=d.createElement('span');box.className='mx-bars';box.setAttribute('aria-hidden','true');
+    box.innerHTML='<span class="mx-bar b"><i style="--w:'+Math.max(3,a.v/b.v*100).toFixed(1)+'%"></i></span><span class="mx-bar a"><i style="--w:100%;--d:1"></i></span>';
+    td.appendChild(box);if(RM)box.classList.add('mx-on');else once(box,function(){box.classList.add('mx-on');},{threshold:.6});});
+
+  // ---- 5. 가이드: 목차 띠 + 읽기 진행선 ----
+  var gdoc=d.querySelector('.gdoc'),hs=gdoc?[].slice.call(gdoc.querySelectorAll('section>h2')).filter(function(h){return !h.closest('.gcta');}):[];
+  if(gdoc&&hs.length>=4){
+    var bar=d.createElement('nav');bar.className='mx-tocbar';bar.setAttribute('aria-label','이 글의 목차');
+    var short=function(t){t=t.replace(/\s+/g,' ').trim();return t.length>22?t.slice(0,21)+'…':t;};
+    var html='<ol>';hs.forEach(function(h,k){if(!h.id)h.id='s'+(k+1);html+='<li><a href="#'+h.id+'" title="'+h.textContent.replace(/["<>&]/g,'')+'">'+short(h.textContent).replace(/[<>&]/g,'')+'</a></li>';});
+    bar.innerHTML=html+'</ol><span class="mx-prog" aria-hidden="true"></span>';d.body.appendChild(bar);
+    var links=[].slice.call(bar.querySelectorAll('a')),pb=bar.querySelector('.mx-prog'),olb=bar.querySelector('ol'),cta=d.querySelector('.gcta'),foot=d.querySelector('footer'),lastCur=-1;
+    links.forEach(function(a){a.addEventListener('click',function(e){var t=d.getElementById(a.getAttribute('href').slice(1));if(!t)return;e.preventDefault();var y=t.getBoundingClientRect().top+scrollY-130;scrollTo({top:y,behavior:RM?'auto':'smooth'});history.replaceState(null,'','#'+t.id);});});
+    var upd=function(){var r=gdoc.getBoundingClientRect(),tot=r.height-innerHeight*.6,p=Math.max(0,Math.min(1,-r.top/Math.max(1,tot)));pb.style.transform='scaleX('+p.toFixed(4)+')';
+      var heroOut=hero?hero.getBoundingClientRect().bottom<70:true,end=(cta||foot).getBoundingClientRect().top<innerHeight*.6;bar.classList.toggle('on',heroOut&&!end);
+      var cur=0;hs.forEach(function(h,k){if(h.getBoundingClientRect().top<innerHeight*.4)cur=k;});
+      if(cur!==lastCur){lastCur=cur;links.forEach(function(a,k){a.classList.toggle('cur',k===cur);if(k===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
+        var al=links[cur];if(al&&bar.classList.contains('on'))olb.scrollTo({left:al.offsetLeft-olb.clientWidth/2+al.offsetWidth/2,behavior:RM?'auto':'smooth'});}};
+    addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+  }
+
+  // ---- 7. 글이 많은 섹션에 시각 포인트 (글은 그대로, 모양만) ----
+  if(gdoc){
+    var secs=[].slice.call(gdoc.querySelectorAll('section')).filter(function(sc){var h=sc.querySelector(':scope>h2');return h&&!sc.classList.contains('gcta');});
+    var main=secs.filter(function(sc){return !sc.classList.contains('gsrc')&&!/자주 묻는 질문|함께 보면 좋은/.test(sc.querySelector(':scope>h2').textContent);});
+    // 섹션 번호 01 / 08
+    main.forEach(function(sc,k){var h=sc.querySelector(':scope>h2'),n=d.createElement('span');n.className='mx-sn';n.setAttribute('aria-hidden','true');
+      n.innerHTML='<b>'+String(k+1).padStart(2,'0')+'</b><i></i><em>'+String(main.length).padStart(2,'0')+'</em>';sc.insertBefore(n,h);});
+    secs.forEach(function(sc){var h=sc.querySelector(':scope>h2').textContent;
+      // 주의 목록 / 체크리스트
+      [].forEach.call(sc.querySelectorAll(':scope>.gbul'),function(ul){
+        if(/막히|실수|조심/.test(h))ul.classList.add('mx-warn');
+        else if(/체크|자료|준비할|갖춰야|확인할|고를|챙길|가지$/.test(h)){ul.classList.add('mx-check');[].forEach.call(ul.children,function(li,k){li.style.setProperty('--d',k);});if(RM)ul.classList.add('mx-run');else once(ul,function(){ul.classList.add('mx-run');},{threshold:.3});}
+        else ul.classList.add('mx-dots');});
+      // 함께하는 방법 → 패널
+      if(/함께하는 방법/.test(h))sc.classList.add('mx-svc');});
+    // 용어 정리 카드
+    [].forEach.call(gdoc.querySelectorAll('.gdl'),function(dl){dl.classList.add('mx-terms');});
+    // 맡는 쪽 칸 → 칩
+    [].forEach.call(gdoc.querySelectorAll('.gtable'),function(tb){var ths=[].slice.call(tb.querySelectorAll('thead th'));var ci=ths.findIndex(function(th){return /맡는 쪽|누가|주체|담당/.test(th.textContent);});if(ci<0)return;
+      [].forEach.call(tb.querySelectorAll('tbody tr'),function(tr){var td=tr.children[ci];if(!td||td.querySelector('.mx-chip'))return;var t=td.textContent,cls=/인도/.test(t)&&/한국/.test(t)?'both':/인도/.test(t)?'in':/한국/.test(t)?'kr':'etc';
+        var sp=d.createElement('span');sp.className='mx-chip '+cls;while(td.firstChild)sp.appendChild(td.firstChild);td.appendChild(sp);});});
+  }
+
+  // ---- 6. 하단 문의 띠: 빛 다발 ----
+  [].forEach.call(d.querySelectorAll('.gcta'),function(box){var cv=d.createElement('canvas');cv.className='mx-gfib';cv.setAttribute('aria-hidden','true');box.insertBefore(cv,box.firstChild);
+    var f=cv.getContext('2d'),FW=1,FH=1,K=Math.min(DPR,MOB?1:1.25),N=MOB?14:22,boost=0,seeds=[];
+    for(var s=0;s<N;s++)seeds.push({a:Math.random(),b:Math.random(),s:.45+Math.random()*.8,o:Math.random()*6.28,w:s%6===0});
+    box.addEventListener('pointermove',function(){boost=1;kick();},{passive:true});
+    reg({el:cv,minDt:MOB?32:0,resize:function(){var r=fit(cv,K);FW=r[0];FH=r[1];},draw:function(t,dt){f.clearRect(0,0,FW,FH);boost*=Math.pow(.25,dt);
+      var lg=f.createLinearGradient(0,0,FW,0);lg.addColorStop(0,'rgb('+rgb(BLUE)+')');lg.addColorStop(.55,'rgb('+rgb(mix(BLUE,GOLD,.5))+')');lg.addColorStop(1,'rgb('+rgb(GOLD)+')');
+      f.globalCompositeOperation='lighter';f.strokeStyle=lg;f.lineCap='round';
+      seeds.forEach(function(sd){var y0=FH*(.75+.3*sd.a),y1=FH*(.2+.6*sd.b),amp=FH*(.12+.1*boost)*sd.s,c1=FH*.7+Math.sin(t*.55*sd.s+sd.o)*amp,c2=FH*.35+Math.cos(t*.45*sd.s+sd.o*1.3)*amp;
+        for(var k=0;k<(sd.w?2:1);k++){f.globalAlpha=k?.05:.10+.22*(sd.s/1.25);f.lineWidth=(k?7:(sd.w?1.8:1))*K;f.beginPath();f.moveTo(-30,y0);f.bezierCurveTo(FW*.33,c1,FW*.66,c2,FW+30,y1);f.stroke();}});
+      f.globalAlpha=1;f.globalCompositeOperation='source-over';}});});
+})();
+
 </script>
 </body>
 </html>
