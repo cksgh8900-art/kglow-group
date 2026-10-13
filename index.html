@@ -1032,6 +1032,104 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
 .tw-guides{margin-top:22px;justify-content:center}
 .tw-guides a{font-size:14px;padding:8px 14px}
 </style>
+<style id="mx-css">
+/* ===== v7 motion (2026-10-13 시안) ===== */
+/* 제목 마스크 드러남 */
+.mx-m{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.mx-i{display:inline-block;transition:transform .95s cubic-bezier(.16,.84,.24,1);transition-delay:calc(var(--i,0) * 90ms)}
+.mx-js .mx-rv:not(.mx-on) .mx-i{transform:translateY(112%)}
+
+/* HOW: 점 물결 배경 */
+#s-how{overflow:hidden;isolation:isolate}
+#s-how>.wrap{position:relative;z-index:1}
+.mx-wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:64%;pointer-events:none;z-index:0;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 45%);mask-image:linear-gradient(180deg,transparent 0%,#000 45%)}
+
+/* HOW: 제품 여정 트랙 */
+.mx-jr{--p:0;--ry:68px;position:relative;height:clamp(150px,19vh,176px);margin-top:clamp(26px,4vh,44px);margin-bottom:6px}
+.mx-rail{position:absolute;left:2%;right:2%;top:calc(var(--ry) - 1.5px);height:3px;border-radius:3px;background:var(--line)}
+.mx-fill{position:absolute;left:0;top:0;bottom:0;width:calc(var(--p) * 100%);border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--gold))}
+.mx-head{position:absolute;top:var(--ry);left:calc(2% + var(--p) * 96%);width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);z-index:3;pointer-events:none;
+  background:radial-gradient(circle at 35% 35%,#fff 0 18%,transparent 19%),linear-gradient(135deg,var(--blue),var(--gold));
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 22%,transparent),0 0 18px 2px color-mix(in srgb,var(--blue) 55%,transparent)}
+.mx-head::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid color-mix(in srgb,var(--gold) 70%,transparent);animation:mxping 1.4s ease-out infinite}
+@keyframes mxping{from{transform:scale(.6);opacity:1}to{transform:scale(1.8);opacity:0}}
+.mx-st{position:absolute;top:0;left:var(--x);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;
+  background:none;border:0;padding:0;color:var(--ink);font:inherit;cursor:pointer;width:max-content;-webkit-tap-highlight-color:transparent}
+.mx-pop{height:30px;display:inline-flex;align-items:center;gap:6px;padding:0 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);
+  font-size:13px;font-weight:800;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.12);opacity:0;transform:translateY(8px) scale(.9);transition:opacity .35s,transform .45s cubic-bezier(.3,1.6,.5,1)}
+.mx-pop::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--gold))}
+.mx-st.on .mx-pop{opacity:1;transform:none}
+.mx-ic{width:48px;height:48px;margin-top:6px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--line);color:var(--ink3);transition:background .35s,border-color .35s,color .35s,transform .35s;position:relative;z-index:2}
+.mx-ic svg{width:22px;height:22px}
+.mx-st.on .mx-ic{background:linear-gradient(135deg,var(--blue),var(--gold));border-color:transparent;color:#fff;transform:scale(1.08)}
+.mx-st b{font-family:var(--disp);font-stretch:var(--disp-w);font-weight:800;font-size:clamp(15px,1.7vw,21px);letter-spacing:var(--track);line-height:1;margin-top:2px;white-space:nowrap}
+.mx-st small{font-size:12.5px;font-weight:700;color:var(--ink2);white-space:nowrap;margin-top:-2px}
+.mx-st:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:12px}
+.mx-st:first-of-type .mx-pop{align-self:center}
+#s-how details.mx-lit .ac-n{color:var(--gold)}
+#s-how details.mx-lit .ac-i{box-shadow:0 0 0 7px color-mix(in srgb,var(--blue) 22%,transparent)}
+
+/* 흐르는 키워드 띠 */
+.mx-mq{display:grid;gap:4px;padding-block:clamp(18px,3.2vh,32px);overflow:hidden;background:var(--bg);border-block:1px solid var(--line)}
+.mx-row{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.mx-track{display:flex;flex:none;align-items:center;gap:clamp(18px,2.4vw,34px);padding-right:clamp(18px,2.4vw,34px);white-space:nowrap;
+  font-family:var(--disp);font-stretch:var(--disp-w);font-weight:800;font-size:clamp(34px,5.6vw,80px);line-height:1.08;letter-spacing:var(--track);color:var(--ink);
+  animation:mxmq 52s linear infinite}
+.mx-row.rev .mx-track{animation-direction:reverse;animation-duration:60s}
+.mx-track .o{color:transparent;-webkit-text-stroke:1.4px var(--ink)}
+.mx-track i{flex:none;width:.2em;height:.2em;border-radius:50%;background:var(--blue)}
+.mx-row.in .mx-track i{background:var(--gold)}
+.mx-mq:hover .mx-track{animation-play-state:paused}
+@keyframes mxmq{to{transform:translateX(-100%)}}
+
+/* 두 법인: 점 지구본 */
+.mx-twh{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.mx-twh .sh{font-size:clamp(34px,4.6vw,64px)}
+.mx-gcap{margin-top:18px;color:var(--ink2);font-size:clamp(16px,1.5vw,18px);font-weight:600;max-width:34em}
+.mx-leg{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.mx-leg button{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:800;font-size:15px;cursor:pointer;transition:border-color .25s,color .25s,transform .25s}
+.mx-leg button:hover{transform:translateY(-2px)}
+.mx-leg i{width:10px;height:10px;border-radius:50%;background:var(--blue);flex:none}
+.mx-leg button[data-k="in"] i{background:var(--gold)}
+.mx-leg button[data-k="us"][aria-pressed="true"]{border-color:var(--blue);color:var(--blue-ink)}
+.mx-leg button[data-k="in"][aria-pressed="true"]{border-color:var(--gold);color:var(--gold-ink)}
+.mx-hint{margin-top:12px;font-size:13px;font-weight:600;color:var(--ink3)}
+.mx-gwrap{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;justify-self:end}
+#mxGlobe{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+#mxGlobe:active{cursor:grabbing}
+/* 지구본이 보여주는 시장의 카드 강조 */
+#s-two .ent{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+#s-two .ent.us.mx-hl{box-shadow:0 0 0 2px var(--blue),0 18px 40px -18px color-mix(in srgb,var(--blue) 60%,transparent)}
+#s-two .ent.in.mx-hl{box-shadow:0 0 0 2px var(--gold),0 18px 40px -18px color-mix(in srgb,var(--gold) 60%,transparent)}
+@media (max-width:860px){
+  .mx-twh{grid-template-columns:minmax(0,1fr)}
+  .mx-gwrap{justify-self:center;max-width:400px}
+}
+
+/* 마지막: 빛 다발 */
+#s-final{overflow:hidden;isolation:isolate}
+#s-final .fn-in{position:relative;z-index:1}
+.mx-fibre{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.45) 32%,#000 62%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.45) 32%,#000 62%)}
+
+/* mx-tablet: 태블릿(601~860px)에서도 법인 카드 2열, 1열일 땐 빈 높이 없앰 */
+@media (min-width:601px) and (max-width:860px){#s-two .tw-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){#s-two .tw .ent{min-height:0}}
+@media (max-width:600px){
+  .mx-jr{height:158px;--ry:66px}
+  .mx-pop{font-size:12px;padding:0 9px;height:28px}
+  .mx-st small{font-size:11.5px}
+}
+@media (prefers-reduced-motion: reduce){
+  .mx-i{transition:none}
+  .mx-js .mx-rv:not(.mx-on) .mx-i{transform:none}
+  .mx-head::after,.mx-track{animation:none}
+  .mx-pop{transition:none}
+}
+
+</style>
+<script>document.documentElement.classList.add("mx-js")</script>
 </head>
 <body>
 
@@ -1066,12 +1164,20 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
 
   <!-- S2 HOW -->
   <section class="scr hw" id="s-how" data-dot="하는 일">
+    <canvas class="mx-wave" id="mxWave" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="kick"><span class="pip duo"></span>저희가 하는 일</p>
-      <h2 class="sh en">HOW WE TAKE IT GLOBAL</h2>
-      <div class="acc">
+      <h2 class="sh en mx-rv"><span class="mx-m"><span class="mx-i" style="--i:0">HOW</span></span> <span class="mx-m"><span class="mx-i" style="--i:1">WE</span></span> <span class="mx-m"><span class="mx-i" style="--i:2">TAKE</span></span> <span class="mx-m"><span class="mx-i" style="--i:3">IT</span></span> <span class="mx-m"><span class="mx-i" style="--i:4">GLOBAL</span></span></h2>
+      <div class="mx-jr" id="mxJr">
+        <div class="mx-rail" aria-hidden="true"><span class="mx-fill"></span></div>
+        <span class="mx-head" aria-hidden="true"></span>
+        <button type="button" class="mx-st" style="--x:12%" data-i="0" aria-label="READY 보기"><span class="mx-pop">인증 완료</span><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><b>READY</b><small>인증 · 라벨</small></button>
+        <button type="button" class="mx-st" style="--x:50%" data-i="1" aria-label="ON SHELVES 보기"><span class="mx-pop">입점 완료</span><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9.5 20v-5.5h5V20"/></svg></span><b>ON SHELVES</b><small>입점 · 유통</small></button>
+        <button type="button" class="mx-st" style="--x:88%" data-i="2" aria-label="SELL 보기"><span class="mx-pop">새 주문 +1</span><span class="mx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><b>SELL</b><small>광고 · 크리에이터</small></button>
+      </div>
+      <div class="acc mx-rv">
         <details class="ac" name="how">
-          <summary><span class="ac-n">01</span><span class="ac-t"><b>MAKE IT READY</b><small>인증 · 라벨 · 수입</small></span><span class="ac-i" aria-hidden="true"></span></summary>
+          <summary><span class="ac-n">01</span><span class="ac-t"><b><span class="mx-m"><span class="mx-i" style="--i:1">MAKE IT READY</span></span></b><small>인증 · 라벨 · 수입</small></span><span class="ac-i" aria-hidden="true"></span></summary>
           <div class="ac-b">
             <div class="mk us"><span class="mk-h">미국 · K-GLOW</span><p>입점 전에 브랜드 등록, 판매 요건, 영문 상세페이지를 함께 점검해요.</p></div>
             <div class="mk in"><span class="mk-h">인도 · HANGUK SKIN</span><p>현지 수입자로서 CDSCO 수입 등록과 인도 라벨을 맡아요.</p></div>
@@ -1079,7 +1185,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
           </div>
         </details>
         <details class="ac" name="how">
-          <summary><span class="ac-n">02</span><span class="ac-t"><b>PUT IT ON SHELVES</b><small>입점 · 유통</small></span><span class="ac-i" aria-hidden="true"></span></summary>
+          <summary><span class="ac-n">02</span><span class="ac-t"><b><span class="mx-m"><span class="mx-i" style="--i:2">PUT IT ON SHELVES</span></span></b><small>입점 · 유통</small></span><span class="ac-i" aria-hidden="true"></span></summary>
           <div class="ac-b">
             <div class="mk us"><span class="mk-h">미국 · K-GLOW</span><p>아마존·틱톡샵에 입점하고, 브랜드 명의 계정으로 운영해요. 재고 흐름도 함께 봐요.</p></div>
             <div class="mk in"><span class="mk-h">인도 · HANGUK SKIN</span><p>통관 후 <span class="nw">보세창고(FTWZ)</span>에 보관하고, <span class="nw">온라인·오프라인</span> 채널로 유통해요.</p></div>
@@ -1087,7 +1193,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
           </div>
         </details>
         <details class="ac" name="how">
-          <summary><span class="ac-n">03</span><span class="ac-t"><b>MAKE IT SELL</b><small>광고 · 크리에이터</small></span><span class="ac-i" aria-hidden="true"></span></summary>
+          <summary><span class="ac-n">03</span><span class="ac-t"><b><span class="mx-m"><span class="mx-i" style="--i:3">MAKE IT SELL</span></span></b><small>광고 · 크리에이터</small></span><span class="ac-i" aria-hidden="true"></span></summary>
           <div class="ac-b">
             <div class="mk us"><span class="mk-h">미국 · K-GLOW</span><p>검색 광고는 자체 개발 도구로 매일 조정하고, 고객층이 맞는 크리에이터를 골라요.</p></div>
             <div class="mk in"><span class="mk-h">인도 · HANGUK SKIN</span><p>현지 고객에게 맞춘 마케팅을 온라인과 오프라인에서 진행해요.</p></div>
@@ -1097,12 +1203,25 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
       </div>
     </div>
   </section>
+  <div class="mx-mq" aria-hidden="true">
+    <div class="mx-row us"><div class="mx-track"><span>AMAZON</span><i></i><span class="o">TIKTOK SHOP</span><i></i><span>MoCRA</span><i></i><span class="o">BRAND REGISTRY</span><i></i><span>FBA</span><i></i><span class="o">SEARCH ADS</span><i></i><span>CREATORS</span><i></i></div><div class="mx-track"><span>AMAZON</span><i></i><span class="o">TIKTOK SHOP</span><i></i><span>MoCRA</span><i></i><span class="o">BRAND REGISTRY</span><i></i><span>FBA</span><i></i><span class="o">SEARCH ADS</span><i></i><span>CREATORS</span><i></i></div></div>
+    <div class="mx-row in rev"><div class="mx-track"><span>CDSCO</span><i></i><span class="o">INDIA LABEL</span><i></i><span>IMPORT</span><i></i><span class="o">FTWZ</span><i></i><span>QUICK COMMERCE</span><i></i><span class="o">RETAIL</span><i></i><span>LOCAL MARKETING</span><i></i></div><div class="mx-track"><span>CDSCO</span><i></i><span class="o">INDIA LABEL</span><i></i><span>IMPORT</span><i></i><span class="o">FTWZ</span><i></i><span>QUICK COMMERCE</span><i></i><span class="o">RETAIL</span><i></i><span>LOCAL MARKETING</span><i></i></div></div>
+  </div>
+
 
   <!-- S3 TWO ENTITIES -->
   <section class="scr tw" id="s-two" data-dot="두 법인">
     <div class="wrap">
-      <p class="kick"><span class="pip duo"></span>한 그룹, 두 전문 법인</p>
-      <h2 class="sh">시장마다,<br>전문 법인이 직접 해요.</h2>
+      <div class="mx-twh">
+        <div>
+          <p class="kick"><span class="pip duo"></span>한 그룹, 두 전문 법인</p>
+          <h2 class="sh">시장마다,<br>전문 법인이 <span class="nw">직접 해요.</span></h2>
+          <p class="mx-gcap">한국에서 출발해, 미국은 <span class="nw">K-GLOW가</span>, 인도는 <span class="nw">HANGUK SKIN이</span> 맡아요.</p>
+          <div class="mx-leg"><button type="button" data-k="us" aria-pressed="false"><i></i>미국 · K-GLOW</button><button type="button" data-k="in" aria-pressed="false"><i></i>인도 · HANGUK SKIN</button></div>
+          <p class="mx-hint">지구본을 옆으로 밀어서 돌려 보세요</p>
+        </div>
+        <div class="mx-gwrap"><canvas id="mxGlobe" role="img" aria-label="서울에서 미국과 인도로 이어지는 경로를 보여주는 지구본"></canvas></div>
+      </div>
       <div class="tw-cards">
         <a class="ent us" href="/us/" data-cta="two-us">
           <span class="flag">USA</span>
@@ -1117,15 +1236,15 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
           <span class="more">인도 진출 보기 <span class="ra"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
         </a>
       </div>
-      <p class="guide-links tw-guides"><a href="/amazon/">아마존 미국 입점 가이드 →</a><a href="/tiktok-shop/">틱톡샵 미국 진출 가이드 →</a><a href="/india/">화장품 인도 진출 가이드 →</a><a href="/india/cdsco/">인도 CDSCO 등록 가이드 →</a><a href="/guides/">가이드 모음 →</a></p>
     </div>
   </section>
 
   <!-- S4 FINAL -->
   <section class="scr fn" id="s-final" data-dot="시작">
+    <canvas class="mx-fibre" id="mxFibre" aria-hidden="true"></canvas>
     <div class="wrap fn-in">
       <p class="kick"><span class="pip duo"></span>시작은 가볍게</p>
-      <h2 class="sh en">YOUR PRODUCT, <em>NEXT.</em></h2>
+      <h2 class="sh en mx-rv"><span class="mx-m"><span class="mx-i" style="--i:0">YOUR</span></span> <span class="mx-m"><span class="mx-i" style="--i:1">PRODUCT,</span></span> <span class="mx-m"><span class="mx-i" style="--i:2"><em>NEXT.</em></span></span></h2>
       <p class="fn-lead">어디서, 무엇부터 하면 좋을지 1분 진단으로 먼저 확인해 보세요.</p>
       <div class="fn-cta">
         <a class="big-cta" href="/check/" data-cta="final-check"><span>1분 진단<br>시작하기</span><span class="ra"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -1462,5 +1581,210 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
 })();
 </script>
 
+<script id="mx-js">
+(function(){
+  var d=document,de=d.documentElement;
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MOB=matchMedia('(max-width: 760px)').matches;
+  var DPR=Math.min(window.devicePixelRatio||1,MOB?1.5:2);
+  function css(n){return getComputedStyle(de).getPropertyValue(n).trim();}
+  function hex(h){h=(h||'#888').replace('#','');if(h.length===3)h=h.split('').map(function(c){return c+c;}).join('');var n=parseInt(h,16);return [n>>16&255,n>>8&255,n&255];}
+  var COL={};
+  function readCol(){COL.blue=hex(css('--blue'));COL.gold=hex(css('--gold'));COL.ink2=hex(css('--ink2'));COL.ink3=hex(css('--ink3'));var b=hex(css('--bg'));COL.dark=(.2126*b[0]+.7152*b[1]+.0722*b[2])/255<.35;}
+  readCol();
+  try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){readCol();kick();});}catch(e){}
+  function rgb(c){return c[0]+','+c[1]+','+c[2];}
+  function mix(a,b,t){return [Math.round(a[0]+(b[0]-a[0])*t),Math.round(a[1]+(b[1]-a[1])*t),Math.round(a[2]+(b[2]-a[2])*t)];}
+  function fit(cv,k){k=k||DPR;var r=cv.getBoundingClientRect();var w=Math.max(1,Math.round(r.width*k)),h=Math.max(1,Math.round(r.height*k));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;}return [w,h];}
+
+  // ---- 한 개의 애니메이션 루프: 화면에 보이는 캔버스만 그림 ----
+  var items=[],raf=0,last=0;
+  function frame(ts){raf=0;var dt=Math.min(.05,(ts-(last||ts))/1000);last=ts;var any=false;
+    items.forEach(function(o){if(o.vis){any=true;var gap=ts-(o.lt||0);if(o.minDt&&gap<o.minDt)return;o.draw(ts/1000,Math.min(.05,o.lt?gap/1000:dt));o.lt=ts;}});
+    if(any&&!RM)raf=requestAnimationFrame(frame);else last=0;}
+  function kick(){if(!raf)raf=requestAnimationFrame(frame);}
+  function reg(o){items.push(o);o.resize();
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){o.vis=e.isIntersecting;if(o.vis){o.resize();kick();}});},{rootMargin:'80px'}).observe(o.el);}else{o.vis=true;kick();}}
+  var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){items.forEach(function(o){o.resize();});kick();},120);});
+  window.mxKick=kick;
+
+  // ---- 제목 마스크 드러남 ----
+  var rv=[].slice.call(d.querySelectorAll('.mx-rv'));
+  if('IntersectionObserver' in window&&!RM){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('mx-on');io.unobserve(e.target);}});},{threshold:.25});rv.forEach(function(el){io.observe(el);});}
+  else rv.forEach(function(el){el.classList.add('mx-on');});
+
+  // ---- HOW: 점 물결 ----
+  var wv=d.getElementById('mxWave');
+  if(wv){var wc=wv.getContext('2d'),WW=1,WH=1;
+    reg({el:wv,resize:function(){var s=fit(wv);WW=s[0];WH=s[1];},draw:function(t){
+      var C=MOB?56:120,R=MOB?18:30,ph=scrollY*.003,hz=WH*.04;
+      wc.clearRect(0,0,WW,WH);
+      var cols=[];for(var c=0;c<C;c++)cols.push(rgb(mix(COL.blue,COL.gold,c/(C-1))));
+      for(var r=0;r<R;r++){var dd=r/(R-1),yb=hz+(WH-hz)*Math.pow(dd,1.35),sc=.3+.7*dd,spread=.85+1.0*dd;
+        var a=(COL.dark?.10:.08)+(COL.dark?.55:.42)*dd,s=(.9+1.9*dd)*DPR;
+        for(var c2=0;c2<C;c2++){var u=c2/(C-1),x=WW/2+(u-.5)*WW*spread;if(x<-6||x>WW+6)continue;
+          var hn=Math.sin(u*8+t*.8+r*.28+ph)*.6+Math.sin(u*3.6-t*.5+r*.12)*.4,h=hn*WH*.16*sc;
+          wc.fillStyle='rgba('+cols[c2]+','+(a*(.4+.6*(hn+1)/2)).toFixed(3)+')';wc.fillRect(x-s/2,yb-h-s/2,s,s);}}
+    }});
+    addEventListener('scroll',function(){if(RM)kick();},{passive:true});
+  }
+
+  // ---- HOW: 제품 여정 ----
+  var jr=d.getElementById('mxJr');
+  if(jr){var sts=[].slice.call(jr.querySelectorAll('.mx-st')),acs=[].slice.call(d.querySelectorAll('#s-how details.ac'));
+    var jth=sts.map(function(s){return (parseFloat(s.style.getPropertyValue('--x'))/100-.02)/.96;});
+    var anim=0,ease=function(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;};
+    var setP=function(v){if(!(v>=0))v=0;jr.style.setProperty('--p',v.toFixed(4));var cur=-1;
+      sts.forEach(function(s,i){var on=v>=jth[i]-.005;s.classList.toggle('on',on);if(on)cur=i;});
+      acs.forEach(function(a,i){a.classList.toggle('mx-lit',i===cur);});};
+    var play=function(){cancelAnimationFrame(anim);if(RM){setP(1);return;}
+      var sg=[[0,jth[0],1000],[jth[0],jth[0],900],[jth[0],jth[1],1300],[jth[1],jth[1],900],[jth[1],jth[2],1300],[jth[2],jth[2],900],[jth[2],1,600]],el=0,prev=0;
+      var step=function(now){if(!prev)prev=now;el+=Math.min(50,Math.max(0,now-prev));prev=now;var acc=0;
+        for(var k=0;k<sg.length;k++){if(el<acc+sg[k][2]){setP(sg[k][0]+(sg[k][1]-sg[k][0])*ease((el-acc)/sg[k][2]));anim=requestAnimationFrame(step);return;}acc+=sg[k][2];}
+        setP(1);anim=0;};
+      anim=requestAnimationFrame(step);};
+    setP(RM?1:0);
+    // 트랙이 화면 가운데쯤(위 15% ~ 아래 80%) 들어오면 시작, 화면 밖으로 완전히 나가면 처음으로
+    var played=false,chk=function(){var r=jr.getBoundingClientRect(),vh=innerHeight;
+      if(!played&&r.top>vh*.12&&r.bottom<vh*.85){played=true;play();}
+      else if(played&&(r.top>vh||r.bottom<0)){played=false;cancelAnimationFrame(anim);setP(RM?1:0);}};
+    addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);setTimeout(chk,300);
+    sts.forEach(function(s,i){s.addEventListener('click',function(){cancelAnimationFrame(anim);played=true;setP(jth[i]);if(acs[i])acs[i].open=true;});});
+  }
+
+  // ---- 두 법인: 점 지구본 v2 (바다 점, 대기 빛, 시장 안 배송망, 정보 칩, 인도↔미국 자동 투어) ----
+  var gc=d.getElementById('mxGlobe');
+  // 지도 데이터(mx-land.txt)는 지구본이 가까워질 때만 따로 불러옴 → 첫 화면 로딩에 영향 없음
+  if(gc){var startGlobe=function(){fetch('/mx-land.txt').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){var b=atob(t.trim()),u=new Uint8Array(b.length);for(var k=0;k<b.length;k++)u[k]=b.charCodeAt(k);initGlobe(u.buffer);}).catch(function(){});};
+    if('IntersectionObserver' in window){var gio=new IntersectionObserver(function(es){if(es.some(function(e){return e.isIntersecting;})){gio.disconnect();startGlobe();}},{rootMargin:'900px 0px'});gio.observe(gc);}else startGlobe();}
+  var gPend=null;[].forEach.call(d.querySelectorAll('.mx-leg button'),function(b){b.addEventListener('click',function(){if(!window.mxFocus){gPend=b.dataset.k;[].forEach.call(d.querySelectorAll('.mx-leg button'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});}});});
+  function initGlobe(buf){var g=gc.getContext('2d'),GW=1,GH=1,P=Math.PI/180;
+    var I16=new Int16Array(buf),n=I16.length/2,SL=new Float32Array(n),CL=new Float32Array(n),LO=new Float32Array(n);
+    for(var i=0;i<n;i++){var la=I16[i*2]/10*P,lo=I16[i*2+1]/10*P;SL[i]=Math.sin(la);CL[i]=Math.cos(la);LO[i]=lo;}
+    // 바다: 데이터 없이 고르게 뿌린 옅은 점
+    var on=MOB?2600:4200,OSL=new Float32Array(on),OCL=new Float32Array(on),OLO=new Float32Array(on);
+    for(var i2=0;i2<on;i2++){var oph=Math.acos(1-2*(i2+.5)/on),oth=Math.PI*(1+Math.sqrt(5))*(i2+.5),olat=Math.PI/2-oph;OSL[i2]=Math.sin(olat);OCL[i2]=Math.cos(olat);OLO[i2]=((oth%(2*Math.PI))+2*Math.PI)%(2*Math.PI)-Math.PI;}
+    var PL={kr:[37.57,126.98],us:[38.5,-98.5],in:[28.46,77.03]};
+    var CITY={us:[[34.05,-118.24],[40.71,-74.0],[41.88,-87.63],[32.78,-96.8],[47.6,-122.3],[33.75,-84.39],[25.76,-80.19]],
+              in:[[19.08,72.88],[12.97,77.59],[22.57,88.36],[17.39,78.49],[13.08,80.27],[23.02,72.57],[26.91,75.79]]};
+    function vec(p){var a=p[0]*P,b=p[1]*P;return [Math.cos(a)*Math.cos(b),Math.cos(a)*Math.sin(b),Math.sin(a)];}
+    function arc(a,b,hgt,steps){var A=vec(a),B=vec(b),dot=A[0]*B[0]+A[1]*B[1]+A[2]*B[2],om=Math.acos(Math.max(-1,Math.min(1,dot)))||1e-6,so=Math.sin(om),out=[];
+      for(var k=0;k<=steps;k++){var t=k/steps,f1=Math.sin((1-t)*om)/so,f2=Math.sin(t*om)/so,x=A[0]*f1+B[0]*f2,y=A[1]*f1+B[1]*f2,z=A[2]*f1+B[2]*f2,m=Math.sqrt(x*x+y*y+z*z),kk=1+hgt*Math.sin(Math.PI*t);
+        out.push([Math.asin(z/m),Math.atan2(y,x),kk]);}return out;}
+    var ROUTES={us:{pts:arc(PL.kr,PL.us,.32,90),col:'blue'},in:{pts:arc(PL.kr,PL.in,.16,70),col:'gold'}};
+    var BR={us:CITY.us.map(function(c,k){return {pts:arc(PL.us,c,.035,24),end:c,off:k/CITY.us.length};}),
+            in:CITY.in.map(function(c,k){return {pts:arc(PL.in,c,.03,24),end:c,off:k/CITY.in.length};})};
+    var CHIP={kr:['YOUR PRODUCT','서울에서 출발'],us:['K-GLOW','아마존 · 틱톡샵'],in:['HANGUK SKIN','등록 · 수입 · 유통']};
+    var VIEW={in:[94,16],us:[-120,24]};
+    var st={lam:94,phi:16,hl:'in',tour:'in',tt:0,idle:0,drag:null,tgt:null};
+    function proj(sl,cl,lo,k,c){var dl=lo-st.lam*P,cp=Math.cos(st.phi*P),sp=Math.sin(st.phi*P),cd=Math.cos(dl);
+      c[0]=k*cl*Math.sin(dl);c[1]=k*(cp*sl-sp*cl*cd);c[2]=k*(sp*sl+cp*cl*cd);return c;}
+    var tmp=[0,0,0];
+    var ents=[].slice.call(d.querySelectorAll('#s-two .ent')),legs=[].slice.call(d.querySelectorAll('.mx-leg button'));
+    function mark(k){legs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.k===k?'true':'false');});
+      ents.forEach(function(a){a.classList.toggle('mx-hl',a.classList.contains(k));});}
+    function focus(k,user){st.hl=k;st.tour=k;st.tt=0;st.tgt=VIEW[k].slice();if(user)st.idle=8;mark(k);kick();}
+    window.mxFocus=function(k){focus(k,true);};
+    mark('in');
+    function rr(x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath();}
+    function line(sc,vis){var pen=false;g.beginPath();for(var j=0;j<sc.length;j++){if(vis[j]){if(!pen){g.moveTo(sc[j][0],sc[j][1]);pen=true;}else g.lineTo(sc[j][0],sc[j][1]);}else pen=false;}g.stroke();}
+    function scr(pts,cx,cy,R){var sc=[],vis=[];pts.forEach(function(q,j){proj(Math.sin(q[0]),Math.cos(q[0]),q[1],q[2],tmp);sc[j]=[cx+tmp[0]*R,cy-tmp[1]*R];vis[j]=tmp[2]>0||tmp[0]*tmp[0]+tmp[1]*tmp[1]>1;});return [sc,vis];}
+    reg({el:gc,minDt:MOB?32:0,resize:function(){var s=fit(gc);GW=s[0];GH=s[1];},draw:function(t,dt){
+      // 자동 투어: 인도 ↔ 미국을 번갈아 보여줌. 사용자가 만지면 잠시 멈춤
+      if(st.drag){}
+      else if(st.idle>0){st.idle-=dt;}
+      else{st.tt+=dt;if(st.tt>6.5){focus(st.tour==='in'?'us':'in');}}
+      if(st.tgt&&!st.drag){var dlam=((st.tgt[0]-st.lam+540)%360)-180,dphi=st.tgt[1]-st.phi,e=Math.min(1,dt*2.2);st.lam+=dlam*e;st.phi+=dphi*e;if(Math.abs(dlam)<.2&&Math.abs(dphi)<.2)st.tgt=null;}
+      else if(!st.drag){st.lam+=dt*1.2;}
+      st.lam=((st.lam+540)%360)-180;
+      var R=Math.min(GW,GH)*.38,cx=GW/2,cy=GH/2,ink=COL.dark?[238,241,246]:[19,28,43];
+      g.clearRect(0,0,GW,GH);
+      // 대기 빛
+      var halo=g.createRadialGradient(cx,cy,R*.98,cx,cy,R*1.22);
+      halo.addColorStop(0,'rgba('+rgb(COL.blue)+','+(COL.dark?.22:.12)+')');halo.addColorStop(1,'rgba('+rgb(COL.blue)+',0)');
+      g.fillStyle=halo;g.beginPath();g.arc(cx,cy,R*1.22,0,6.2832);g.fill();
+      var bg=hex(css('--bg')),gr=g.createRadialGradient(cx-R*.4,cy-R*.45,R*.05,cx,cy,R);
+      gr.addColorStop(0,'rgba('+rgb(mix(bg,COL.blue,COL.dark?.32:.10))+',1)');gr.addColorStop(1,'rgba('+rgb(mix(bg,COL.blue,COL.dark?.06:.02))+',1)');
+      g.fillStyle=gr;g.beginPath();g.arc(cx,cy,R,0,6.2832);g.fill();
+      var rim=g.createLinearGradient(cx-R,cy-R,cx+R,cy+R);rim.addColorStop(0,'rgba('+rgb(COL.blue)+',.7)');rim.addColorStop(1,'rgba('+rgb(COL.gold)+',.7)');
+      g.strokeStyle=rim;g.lineWidth=1.4*DPR;g.globalAlpha=COL.dark?.8:.6;g.stroke();g.globalAlpha=1;
+      // 바다 점 + 땅 점: 밝기 단계별로 모아서 한 번에 그림(그리기 횟수 줄이기)
+      var base=COL.dark?COL.ink2:COL.ink3,ds=(MOB?1.3:1.5)*DPR*Math.max(.8,R/(230*DPR)),NB=5,bk=[];for(var q0=0;q0<NB;q0++)bk.push([]);
+      g.fillStyle='rgb('+rgb(base)+')';g.beginPath();var s0=ds*.7;
+      for(var o=0;o<on;o++){proj(OSL[o],OCL[o],OLO[o],1,tmp);if(tmp[2]<=0)continue;g.rect(cx+tmp[0]*R-s0/2,cy-tmp[1]*R-s0/2,s0,s0);}
+      g.globalAlpha=COL.dark?.06:.08;g.fill();
+      var stp=MOB?2:1;
+      for(var i=0;i<n;i+=stp){proj(SL[i],CL[i],LO[i],1,tmp);var z=tmp[2];if(z<=0)continue;bk[Math.min(NB-1,Math.floor(z*NB))].push(cx+tmp[0]*R,cy-tmp[1]*R);}
+      for(var q1=0;q1<NB;q1++){var zz=(q1+.5)/NB,sz=ds*(.55+.55*zz),arr=bk[q1];if(!arr.length)continue;g.beginPath();
+        for(var a1=0;a1<arr.length;a1+=2)g.rect(arr[a1]-sz/2,arr[a1+1]-sz/2,sz,sz);
+        g.globalAlpha=(COL.dark?.24:.3)+(COL.dark?.72:.66)*zz;g.fill();}
+      g.globalAlpha=1;g.lineCap='round';
+      // 시장 안 배송망: 허브 → 도시, 점이 출발해서 도착하면 물결
+      ['us','in'].forEach(function(key){var c=COL[key==='us'?'blue':'gold'],strong=st.hl===key;
+        BR[key].forEach(function(b){var p=scr(b.pts,cx,cy,R),sc=p[0],vis=p[1];
+          g.strokeStyle='rgba('+rgb(c)+','+(strong?.45:.22)+')';g.lineWidth=1*DPR;line(sc,vis);
+          if(RM)return;var cyc=((t/3.4)+b.off)%1,L=sc.length-1;
+          if(cyc<.5){var j=Math.round(cyc/.5*L);if(vis[j]){g.fillStyle='rgb('+rgb(c)+')';g.globalAlpha=strong?1:.6;g.beginPath();g.arc(sc[j][0],sc[j][1],2*DPR,0,6.2832);g.fill();}}
+          else if(vis[L]){var q=(cyc-.5)/.5;g.globalAlpha=(1-q)*(strong?.9:.5);g.strokeStyle='rgb('+rgb(c)+')';g.lineWidth=1.4*DPR;g.beginPath();g.arc(sc[L][0],sc[L][1],(2+q*12)*DPR,0,6.2832);g.stroke();}
+          if(vis[L]){g.globalAlpha=strong?.95:.55;g.fillStyle='rgb('+rgb(c)+')';g.beginPath();g.arc(sc[L][0],sc[L][1],1.8*DPR,0,6.2832);g.fill();}
+          g.globalAlpha=1;});});
+      // 서울 → 두 시장 경로, 점 3개씩 이동
+      ['in','us'].forEach(function(key){var ro=ROUTES[key],c=COL[ro.col],on2=st.hl===key,p=scr(ro.pts,cx,cy,R),sc=p[0],vis=p[1];
+        g.strokeStyle='rgba('+rgb(c)+','+(on2?.95:.45)+')';g.lineWidth=(on2?2.6:1.6)*DPR;line(sc,vis);
+        if(RM)return;var L=ro.pts.length;
+        for(var m=0;m<3;m++){var head=Math.floor((((t*.22)+m/3)%1)*L);
+          for(var q=0;q<12;q++){var j2=head-q;if(j2<0||!vis[j2])continue;g.globalAlpha=(1-q/12)*(on2?1:.6);g.fillStyle='rgb('+rgb(c)+')';g.beginPath();g.arc(sc[j2][0],sc[j2][1],(on2?3.2:2.4)*DPR*(1-q/18),0,6.2832);g.fill();}}
+        g.globalAlpha=1;});
+      // 핀 + 정보 칩
+      var fs=12*DPR,fs2=11*DPR,pad=8*DPR;
+      [['kr',ink],['us',COL.blue],['in',COL.gold]].forEach(function(pn){
+        var key=pn[0],col=pn[1],q=PL[key];proj(Math.sin(q[0]*P),Math.cos(q[0]*P),q[1]*P,1,tmp);if(tmp[2]<=.03)return;
+        var x=cx+tmp[0]*R,y=cy-tmp[1]*R,a=Math.min(1,tmp[2]*3),ph=RM?0:(t*.6+(key==='us'?.33:key==='in'?.66:0))%1;
+        g.globalAlpha=a*(1-ph)*.8;g.strokeStyle='rgb('+rgb(col)+')';g.lineWidth=1.6*DPR;g.beginPath();g.arc(x,y,(6+ph*20)*DPR,0,6.2832);g.stroke();
+        g.globalAlpha=a;g.fillStyle='rgb('+rgb(col)+')';g.beginPath();g.arc(x,y,5*DPR,0,6.2832);g.fill();
+        g.fillStyle=COL.dark?'#0B1019':'#FFFFFF';g.beginPath();g.arc(x,y,2*DPR,0,6.2832);g.fill();
+        // 칩
+        var c1=CHIP[key];g.font='800 '+fs+'px "Pretendard Variable",system-ui,sans-serif';var w1=g.measureText(c1[0]).width,w2=0;
+        if(c1[1]){g.font='600 '+fs2+'px "Pretendard Variable",system-ui,sans-serif';w2=g.measureText(c1[1]).width;}
+        var w=Math.max(w1,w2)+pad*2+10*DPR,h=c1[1]?40*DPR:26*DPR,bx,by;
+        if(key==='in'){bx=x-14*DPR-w;by=y-h/2;if(bx<2){bx=x+14*DPR;by=y+12*DPR;}}else{bx=x+12*DPR;by=y-h-10*DPR;if(bx+w>GW-2)bx=x-12*DPR-w;if(by<2)by=y+12*DPR;}
+        if(by+h>GH-2)by=y-h-10*DPR;
+        g.globalAlpha=a*(st.hl===key||key==='kr'?1:.75);
+        g.fillStyle=COL.dark?'rgba(19,26,38,.92)':'rgba(255,255,255,.95)';rr(bx,by,w,h,10*DPR);g.fill();
+        g.strokeStyle='rgba('+rgb(col)+','+(st.hl===key?.9:.35)+')';g.lineWidth=1.2*DPR;g.stroke();
+        g.fillStyle='rgb('+rgb(col)+')';g.beginPath();g.arc(bx+pad+3*DPR,by+(c1[1]?14*DPR:h/2),3*DPR,0,6.2832);g.fill();
+        g.textBaseline='middle';g.fillStyle='rgb('+rgb(ink)+')';g.font='800 '+fs+'px "Pretendard Variable",system-ui,sans-serif';g.fillText(c1[0],bx+pad+10*DPR,by+(c1[1]?14*DPR:h/2));
+        if(c1[1]){g.fillStyle='rgb('+rgb(COL.dark?COL.ink2:COL.ink2)+')';g.font='600 '+fs2+'px "Pretendard Variable",system-ui,sans-serif';g.fillText(c1[1],bx+pad+10*DPR,by+29*DPR);}
+        g.globalAlpha=1;});
+    }});
+    // 드래그
+    gc.addEventListener('pointerdown',function(e){st.drag={x:e.clientX,y:e.clientY,lam:st.lam,phi:st.phi,mouse:e.pointerType==='mouse'};st.tgt=null;try{gc.setPointerCapture(e.pointerId);}catch(_){}});
+    gc.addEventListener('pointermove',function(e){if(!st.drag)return;var dx=e.clientX-st.drag.x,dy=e.clientY-st.drag.y;st.lam=st.drag.lam-dx*.45;if(st.drag.mouse)st.phi=Math.max(-35,Math.min(55,st.drag.phi+dy*.3));kick();});
+    var up=function(){if(st.drag){st.drag=null;st.idle=6;}};gc.addEventListener('pointerup',up);gc.addEventListener('pointercancel',up);
+    legs.forEach(function(b){b.addEventListener('click',function(){focus(b.dataset.k,true);});});
+    ents.forEach(function(a){var k=a.classList.contains('in')?'in':'us';a.addEventListener('mouseenter',function(){focus(k,true);});a.addEventListener('focus',function(){focus(k,true);});});
+    if(gPend)focus(gPend,true);
+  }
+
+  // ---- 마지막: 빛 다발 ----
+  var fc=d.getElementById('mxFibre');
+  if(fc){var f=fc.getContext('2d'),FW=1,FH=1,N=MOB?18:22,boost=0,seeds=[];
+    for(var s2=0;s2<N;s2++)seeds.push({a:Math.random(),b:Math.random(),s:.45+Math.random()*.8,o:Math.random()*6.28,w:s2%7===0});
+    var sec=d.getElementById('s-final');if(sec)sec.addEventListener('pointermove',function(){boost=1;kick();},{passive:true});
+    var FK=Math.min(DPR,MOB?1:1.25);
+    reg({el:fc,minDt:MOB?32:0,resize:function(){var s=fit(fc,FK);FW=s[0];FH=s[1];},draw:function(t,dt){
+      f.clearRect(0,0,FW,FH);boost*=Math.pow(.25,dt);
+      var lg=f.createLinearGradient(0,0,FW,0);lg.addColorStop(0,'rgb('+rgb(COL.blue)+')');lg.addColorStop(.55,'rgb('+rgb(mix(COL.blue,COL.gold,.5))+')');lg.addColorStop(1,'rgb('+rgb(COL.gold)+')');
+      f.globalCompositeOperation=COL.dark?'lighter':'source-over';f.strokeStyle=lg;f.lineCap='round';
+      seeds.forEach(function(s){var y0=FH*(.6+.4*s.a),y1=FH*(.3+.5*s.b),amp=FH*(.09+.08*boost)*s.s;
+        var c1y=FH*.62+Math.sin(t*.55*s.s+s.o)*amp,c2y=FH*.42+Math.cos(t*.45*s.s+s.o*1.3)*amp;
+        var pass=s.w?2:1;for(var k=0;k<pass;k++){f.globalAlpha=Math.min(1,(k?(COL.dark?.05:.04):(COL.dark?.12:.10)+(COL.dark?.26:.18)*(s.s/1.25))*(MOB?1.6:1));f.lineWidth=(k?7:(s.w?1.8:1))*FK;
+          f.beginPath();f.moveTo(-30,y0);f.bezierCurveTo(FW*.33,c1y,FW*.66,c2y,FW+30,y1);f.stroke();}});
+      f.globalAlpha=1;f.globalCompositeOperation='source-over';
+    }});
+  }
+})();
+
+</script>
 </body>
 </html>
