@@ -336,6 +336,7 @@ input[type=range]{width:100%;accent-color:var(--gold);height:28px}
 form{display:grid;gap:22px}
 fieldset{border:0;margin:0;padding:0;display:grid;gap:10px;min-width:0}
 legend{font-size:14px;font-weight:700;padding:0;margin-bottom:10px}
+legend .opt{font-weight:500;color:var(--ink3)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{position:relative;cursor:pointer}
 .chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
@@ -1190,6 +1191,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
 }
 
 </style>
+<script id="kg-src">(function(){try{var k='kg_src';if(sessionStorage.getItem(k))return;var r=document.referrer,h='',u='';try{u=new URLSearchParams(location.search).get('utm_source')||''}catch(e){}if(r){try{h=new URL(r).hostname}catch(e){}}if(h===location.hostname)h='';sessionStorage.setItem(k,JSON.stringify({r:h,u:u.slice(0,60),p:location.pathname}))}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1286,6 +1288,16 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
           <div class="in-f"><label for="f-nm">이름</label><input id="f-nm" name="name" autocomplete="name" required></div>
           <div class="in-f"><label for="f-ct">이메일 또는 전화번호</label><input id="f-ct" name="contact" autocomplete="email" required></div>
         </div>
+        <fieldset class="heard">
+          <legend>어떻게 알게 되셨나요? <span class="opt">(선택)</span></legend>
+          <div class="chips">
+            <label><input type="radio" name="heard" value="ai"><span>ChatGPT 등 AI 답변</span></label>
+            <label><input type="radio" name="heard" value="search"><span>구글·네이버 검색</span></label>
+            <label><input type="radio" name="heard" value="sns"><span>인스타그램</span></label>
+            <label><input type="radio" name="heard" value="ref"><span>지인·기관 소개</span></label>
+            <label><input type="radio" name="heard" value="etc"><span>기타</span></label>
+          </div>
+        </fieldset>
         <details class="more"><summary>더 알려주실 게 있나요? (선택)</summary>
           <div class="in-f"><label for="f-msg" class="sr">추가 내용</label><textarea id="f-msg" name="message" placeholder="예) Amazon에 입점했는데 광고 효율이 잘 안 나와요."></textarea></div>
         </details>
@@ -1314,6 +1326,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
         <a href="/amazon/mocra/">아마존 화장품 MoCRA</a>
         <a href="/amazon/brand-registry/">아마존 브랜드 레지스트리</a>
         <a href="/us/amazon-vs-tiktok-shop/">아마존 vs 틱톡샵</a>
+        <a href="/us/agency-checklist/">대행사 고르는 법</a>
         <a href="/india/">화장품 인도 진출 가이드</a>
         <a href="/india/cdsco/">인도 CDSCO 등록 가이드</a>
         <a href="/india/label/">인도 화장품 라벨 규정</a>
@@ -1340,7 +1353,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
   <div class="dlg-body">
     <p>(주)케이글로우(이하 “회사”)는 문의 응대에 필요한 최소한의 개인정보만 처리해요.</p>
     <h4>1. 수집 항목</h4>
-    <ul><li>필수: 회사·브랜드명, 이름, 이메일 또는 전화번호</li><li>선택: 관심 분야, 추가 문의 내용</li></ul>
+    <ul><li>필수: 회사·브랜드명, 이름, 이메일 또는 전화번호</li><li>선택: 관심 분야, 알게 된 경로, 추가 문의 내용</li><li>자동 기록: 처음 들어온 경로(이전 사이트 주소의 도메인, 예: chatgpt.com)</li></ul>
     <h4>2. 이용 목적</h4>
     <p>협업 문의 응대, 상담 일정 조율, 제안서 발송</p>
     <h4>3. 보유 기간</h4>
@@ -1514,12 +1527,19 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
     }
     var btn=document.getElementById('f-submit'); btn.disabled=true; btn.textContent='보내는 중…';
     var topics=[].slice.call(form.querySelectorAll('input[name="topic"]:checked')).map(function(c){return c.value;}).join(',');
+    var hd=form.querySelector('input[name="heard"]:checked'), HL={ai:'ChatGPT 등 AI 답변',search:'구글·네이버 검색',sns:'인스타그램',ref:'지인·기관 소개',etc:'기타'};
+    var heard=hd?hd.value:'', src={};
+    try{ src=JSON.parse(sessionStorage.getItem('kg_src')||'{}')||{}; }catch(x){}
+    var sh=((src.u||'')+' '+(src.r||'')).toLowerCase(), entry='직접 방문';
+    [['chatgpt','ChatGPT'],['openai','ChatGPT'],['perplexity','Perplexity'],['gemini','Gemini'],['copilot','Copilot'],['claude','Claude'],['bing','Bing'],['google','Google'],['naver','네이버'],['daum','Daum'],['instagram','Instagram'],['facebook','Facebook'],['kakao','카카오'],['linktr','Linktree']].some(function(m){ if(sh.indexOf(m[0])>-1){ entry=m[1]; return true; } return false; });
+    if(entry==='직접 방문' && (src.r||src.u)) entry=(src.u||src.r);
+    var extra='\n[알게 된 경로] '+(heard?HL[heard]:'선택 안 함')+'\n[유입] '+entry+(src.r?' ('+src.r+')':'')+(src.p?' · 첫 페이지 '+src.p:'');
     var body=new URLSearchParams({
       topics:topics,
       company:document.getElementById('f-co').value.trim(),
       name:document.getElementById('f-nm').value.trim(),
       contact:ct,
-      message:document.getElementById('f-msg').value.trim(),
+      message:(document.getElementById('f-msg').value.trim()+extra).trim(),
       agree:'yes',
       website:document.getElementById('f-web').value,
       page:location.href.split('#')[0]
@@ -1528,7 +1548,7 @@ body.at-hero .nav.scrolled:not(.open){background:rgba(10,17,28,.72);backdrop-fil
       .then(function(){
         msg.className='formmsg ok';
         msg.textContent='문의가 접수됐어요. 1영업일 안에 연락드릴게요.';
-        track('generate_lead',['track','Lead'],{method:'form',topics:topics});
+        track('generate_lead',['track','Lead'],{method:'form',topics:topics,heard_from:heard||'none',entry_source:entry});
         form.reset();
       })
       .catch(function(){
