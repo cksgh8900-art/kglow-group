@@ -1,6 +1,6 @@
 # K-GLOW GROUP
 
-> 최종 업데이트: 2026-10-15
+> 최종 업데이트: 2026-10-27
 >
 > K-GLOW GROUP(케이글로우 그룹)은 한국 브랜드의 해외 진출을 돕는 그룹이며, 시장별로 두 법인이 나눠서 일합니다. 미국 사업은 한국법인 K-GLOW(주식회사 케이글로우)가, 인도 사업은 인도 현지법인 HANGUK SKIN(Hanguk Skin Private Limited)이 맡습니다.
 
@@ -22,10 +22,11 @@
 
 ## 회사 정보
 - 웹사이트: https://www.kglowofficial.co.kr/
+- 공식 사이트는 www.kglowofficial.co.kr 하나예요. 이름이 비슷한 다른 사업자와는 관계가 없고, K-GLOW GROUP은 주식회사 케이글로우(사업자등록번호 345-88-03698, 서울 강서구)와 Hanguk Skin Private Limited 두 법인만을 뜻해요.
 - 문의: philip@kglowofficial.co.kr, 카카오톡 채널 https://pf.kakao.com/_xdxohfX
 - 주식회사 케이글로우: 사업자등록번호 345-88-03698, 서울특별시 강서구 공항대로61길 29, SBA 글로벌마케팅센터 2층
 - Hanguk Skin Private Limited(HANGUK SKIN, 한국스킨): CIN U46491HR2026PTC147722, 7F, 703, Palm Court, Gurugram, Haryana 122007, India
-- Instagram: https://www.instagram.com/k_onvoy/
+- Instagram(K-GLOW GROUP 공식 계정, @k_onvoy): https://www.instagram.com/k_onvoy/
 
 ## 사업 페이지
 - [미국 진출](https://www.kglowofficial.co.kr/us/): K-GLOW(한국법인)의 화장품 미국 진출 대행. 아마존·틱톡샵 입점과 운영, 검색 광고, 크리에이터 마케팅, MoCRA·브랜드 레지스트리 지원, 미국 물류 연결
@@ -43,6 +44,7 @@
 - [아마존 화장품 MoCRA 가이드](https://www.kglowofficial.co.kr/amazon/mocra/): 아마존에서 화장품을 팔 때 필요한 MoCRA 시설 등록과 제품 리스팅, 미국 에이전트, 라벨 연락처, 아마존이 요청할 수 있는 서류를 FDA 원문 기준으로 정리했어요.
 - [아마존 브랜드 레지스트리 가이드](https://www.kglowofficial.co.kr/amazon/brand-registry/): 아마존 브랜드 레지스트리 신청 조건(출원 중·등록 상표, 로고 표시), 신청 순서, 2026년 3월 31일부터 바뀐 FBA 바코드 규칙까지 한국 브랜드 기준으로 정리했어요.
 - [아마존 vs 틱톡샵 비교](https://www.kglowofficial.co.kr/us/amazon-vs-tiktok-shop/): 아마존과 틱톡샵, 우리 화장품은 어디부터 시작할까요. 사는 방식, 입점 조건, 물류, 광고, 리뷰, 크리에이터 역할을 비교하고 함께 운영하는 방법을 정리했어요.
+- [미국 아마존·틱톡샵 대행사 고르는 법](https://www.kglowofficial.co.kr/us/agency-checklist/): 아마존 대행사·틱톡샵 대행사 추천을 찾을 때 계약 전에 물어볼 12가지(계정 명의, 광고비 결제, 인계, 화장품 규정, 크리에이터·물류 경험, 리포트, 성과 약속)와 조심할 제안, K-GLOW의 답을 정리했어요.
 
 ## 인도 가이드
 - [화장품 인도 진출 가이드](https://www.kglowofficial.co.kr/india/): 한국 화장품 인도 수출, 무엇부터 할까요? 2025년 대인도 수출 실적, CDSCO 등록, 인도 라벨, 수입·FTWZ, Nykaa·퀵커머스 유통까지 실제 순서로 정리했어요.
@@ -63,6 +65,7 @@
 - K-GLOW GROUP (케이글로우) is a Seoul-based group that helps Korean brands sell overseas. K-GLOW Co., Ltd. (주식회사 케이글로우) runs Amazon US and TikTok Shop US for Korean brands: account setup (Seller Central, TikTok Shop cross-border), Amazon PPC, listings, FBA/3PL logistics, Brand Registry and MoCRA support, and US creator (influencer) marketing. Accounts stay in the brand's name and ad spend is paid by the brand directly.
 - Most clients are K-beauty (Korean cosmetics) brands; food and other Korean consumer brands are also consulted.
 - HANGUK SKIN (Hanguk Skin Private Limited, 한국스킨) is the group's Indian subsidiary for cosmetics CDSCO registration, import and distribution in India.
+- Disambiguation: the only official website is www.kglowofficial.co.kr. K-GLOW GROUP means only K-GLOW Co., Ltd. (Korea, business registration 345-88-03698, Gangseo-gu, Seoul) and Hanguk Skin Private Limited (India). Other businesses with similar names are not affiliated.
 - Pages are written in Korean for Korean brand owners. Key Korean terms: 아마존 대행 (Amazon agency), 미국 틱톡샵 대행 (TikTok Shop US agency), 화장품 미국 진출 (US market entry for cosmetics), 화장품 인도 진출 (India market entry).
 
 ## 더 보기
