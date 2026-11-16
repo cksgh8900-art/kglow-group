@@ -160,6 +160,10 @@ A: 네. K뷰티가 가장 많지만 식품 등 다른 제품도 함께해요. �
 Q: 틱톡샵도 같이 맡길 수 있나요?
 A: 네. 아마존과 틱톡샵을 한 팀이 함께 운영해요. 틱톡에서 알게 된 고객이 아마존에서 검색해 사는 흐름도 같이 봐요. 범위는 미국 틱톡샵 대행에서 볼 수 있어요.
 
+Q: 아마존 입점 대행과 아마존 구매대행은 다른가요?
+A: 달라요. 구매대행은 한국 소비자가 미국 아마존 상품을 살 수 있게 대신 사서 보내 주는 서비스예요. 아마존 입점 대행은 한국 브랜드가 미국 아마존에서 팔 수 있도록 셀러 계정 개설과 판매 준비, 운영을 맡는 일이에요.
+Q: 아마존 운영대행은 어디까지 맡길 수 있나요?
+A: 입점 뒤 상세페이지 관리, 광고(PPC) 운영, 재고·FBA 입고 계획, 리뷰와 계정 상태 점검을 맡길 수 있어요. 계정은 브랜드 명의로 두고, 광고비는 브랜드가 직접 결제해요.
 
 ## 미국 틱톡샵 대행 (https://www.kglowofficial.co.kr/tiktok-shop/agency/)
 미국 틱톡샵 대행을 찾는 한국 브랜드를 위해 K-GLOW가 크로스보더 입점, 미국 물류(3PL) 연결, 크리에이터 섭외·샘플·라이브, 광고까지 한 팀으로 맡아요. 계정은 브랜드 명의로 운영해요.
@@ -414,6 +418,61 @@ A: 네. K-GLOW는 입점 서류 준비, 미국 3PL 연결, 상품 등록부터 �
 
 출처: TikTok 한국어 블로그, 코리아-US 크로스보더 (2025-06-19) https://ads.tiktok.com/business/ko/blog/korea-us-cross-border, TikTok Shop Academy(US), Registering for TikTok Shop (2025-07-21 업데이트) https://seller-us.tiktok.com/university/essay?knowledge_id=3396404588660481, Korea Times, TikTok lowers entry barrier for Korean sellers (2025-05-23) https://www.koreatimes.co.kr/business/tech-science/20250523/tiktok-lowers-entry-barrier-for-korean-sellers-to-enter-us-market
 
+입점 비용과 정산: 판매 수수료 뷰티 6%, 입점비·월 이용료 항목 없음(2026-11), 정산은 배송 완료일 기준 신규 31일·기본 8일, 30일 예치금. 입점 뒤 첫 30일: 커미션 1~80% 설정, 팔로워 1,000명+ 크리에이터에게 샘플, 14일 안 게시 확인, GMV Max로 잘 팔린 영상 확장.
+Q: 틱톡샵 입점하는 데 비용이 드나요?
+A: 2026년 11월에 확인한 TikTok Shop 공식 안내에는 입점비나 월 이용료 항목이 없어요. 팔린 주문에 판매 수수료(뷰티 6%)가 붙고, 미국 창고, 샘플, 크리에이터 커미션, 광고비가 따로 들어요.
+
+## 미국 틱톡샵 수수료·정산 (https://www.kglowofficial.co.kr/tiktok-shop/fees/)
+미국 틱톡샵 수수료를 공식 안내 기준으로 정리했어요. 뷰티 판매 수수료 6%와 계산법, 크리에이터 커미션(셀러가 1~80% 설정), 배송 완료 뒤 정산 기간(신규 31일·기본 8일), 30일 예치금, 광고비까지 누가 무엇을 내는지 알려드려요.
+
+- 판매 수수료: 뷰티·퍼스널케어 6%, (고객 결제 금액 + 플랫폼 할인 − 세금) × 수수료율. 예: $30 → $1.80
+- 크리에이터 커미션: 셀러가 1~80% 설정
+- 크리에이터 자격: 팔로워 1,000명 이상, 만 18세 이상, 미국 거주
+- 무료 샘플: 수령 후 14일 안에 게시, 최근 120일 판매 실적 있는 크리에이터만
+- 정산: 배송 완료일 기준 신규 31일, 기본 8일, 빠른 5일(성과 점수 3.5+), 가장 빠른 1일(4.0+). 주문마다 일부 30일 예치
+- 광고: 2025년 7월부터 상품 광고는 GMV Max 캠페인
+- 입점비·월 이용료: 공식 안내에 항목 없음(2026-11 확인)
+
+Q: 미국 틱톡샵 판매 수수료는 몇 %인가요?
+A: TikTok Shop Academy의 카테고리별 수수료표 기준으로 뷰티·퍼스널케어는 6%예요(2026년 10월 8일 업데이트). 2026년에 8%로 올랐다는 보도도 있었지만, 공식 표는 지금도 6%예요.
+Q: 입점비나 월 이용료가 있나요?
+A: 2026년 11월에 확인한 공식 수수료 안내와 셀러 약관에는 입점비나 월 이용료 항목이 없어요. 팔린 주문에 판매 수수료가 붙는 구조예요. 미국 창고(3PL) 비용, 샘플, 광고비는 따로 들어요.
+Q: 판매 대금은 언제 들어오나요?
+A: 주문일이 아니라 배송 완료일부터 세요. 신규 셀러는 31일, 기본은 8일이고, 셀러 성과 점수가 높으면 5일이나 1일로 빨라져요. 주문마다 일부는 30일 동안 예치금으로 잡혀요.
+Q: 크리에이터 커미션은 누가 정하나요?
+A: 셀러가 정해요. 상품별, 상품 묶음별, 전체 상품 단위로 1~80% 사이에서 설정해요. 처음에는 경쟁 상품의 커미션과 우리 마진을 같이 보고 정해요.
+
+출처: TikTok Shop Academy(US), 카테고리별 판매 수수료 (2026-10-08 업데이트) https://seller-us.tiktok.com/university/essay?knowledge_id=5988482086864682&lang=en, TikTok Shop Academy(US), Referral Fee Updates 2024 (2025-05-08 업데이트) https://seller-us.tiktok.com/university/essay?knowledge_id=5982454398175018&lang=en, TikTok Shop Academy(US), Setting Up Affiliate Collaborations (2026-07-16) https://seller-us.tiktok.com/university/essay?knowledge_id=6837873164896001&lang=en, TikTok Shop Academy(US), Finance & Settlement 101 (2026-08-10) https://seller-us.tiktok.com/university/essay?knowledge_id=1167036928444174&lang=en, TikTok Shop Academy(US), Dynamic Settlement and Reserve Policy (2026-07-31) https://seller-us.tiktok.com/university/essay?knowledge_id=3995852763531009&lang=en, TikTok Shop Academy(US), Guide to Samples (2026-09-24) https://seller-us.tiktok.com/university/essay?knowledge_id=5764641632306946, TikTok Shop Academy(US), Creator Eligibility Policy (2026-09-25) https://seller-us.tiktok.com/university/essay?knowledge_id=6939143037667118, TikTok 광고 도움말, GMV Max 전환 안내 (2026년 3월 업데이트) https://ads.tiktok.com/help/article/gmv-max-migration-tiktok-shop-ads
+
+## 아마존 입점 방법 7단계 (https://www.kglowofficial.co.kr/amazon/how-to-start/)
+아마존 입점 방법을 순서대로 정리했어요. 한국 사업자가 미국 아마존 셀러로 가입할 때 준비물, 계정 생성부터 본인 확인·세금·정산 설정, 뷰티 판매 승인까지 7단계와 플랜 요금, 판매 수수료, 신규 셀러 혜택을 공식 안내 기준으로 알려드려요.
+
+1. 서류 준비: 여권, 해외 결제가 되는 카드, 사업자등록증, 180일 안에 발급한 주소 증빙을 준비해요. 서류의 이름과 주소는 가입 정보와 띄어쓰기까지 같아야 해요.
+2. 계정 만들기: 셀러 센트럴에서 이름, 이메일, 비밀번호로 가입하고 이메일로 받은 인증번호를 넣어요. 처음에는 프로페셔널 플랜으로 시작해요.
+3. 사업·결제 정보 입력: 사업자 정보와 담당자 정보, 결제 카드를 등록해요. 월 이용료가 이 카드로 나가요.
+4. 스토어 정보 입력: 스토어 이름, 상품 바코드(UPC) 보유 여부, 브랜드 보유 여부를 입력해요.
+5. 본인 확인: 신분증과 주소 증빙을 올리고 얼굴 사진 촬영이나 영상 인터뷰를 해요. 아마존은 보통 3영업일 안에 끝난다고 안내해요. 일부 셀러는 주소로 온 우편 인증번호도 입력해요.
+6. 세금·정산 설정: 미국 세금 정보 인터뷰를 마치고 대금을 받을 계좌를 연결해요. 미국 계좌가 없어도 아마존 환전 서비스나 가상계좌로 받을 수 있어요.
+7. 상품 등록과 판매 승인: 상품을 등록할 때 "Apply to sell"이 뜨면 판매 승인부터 받아요. 뷰티는 승인이 필요한 상품이 많아요.
+
+- 요금: 계정 생성 무료, 프로페셔널 월 $39.99, 개인 판매 건당 $0.99
+- 뷰티·퍼스널케어 판매 수수료: $10 이하 8%, $10 초과 15%, 최소 $0.30
+- 원화 정산 환전 1.5%(Currency Converter for Sellers)
+- 뷰티 판매 승인 서류: 180일 내 인보이스(10개 이상), 브랜드 승인서, 상품 사진, GMP·COA, MoCRA 관련 서류
+
+Q: 아마존 입점 비용은 얼마인가요?
+A: 계정을 만드는 건 무료예요. 판매하면 플랜 요금(프로페셔널 월 $39.99, 개인 판매 건당 $0.99)과 판매 수수료가 붙어요. 뷰티·퍼스널케어 판매 수수료는 판매가 $10 이하 8%, $10 초과 15%이고 최소 $0.30이에요. FBA를 쓰면 물류 수수료가 따로 들어요.
+Q: 미국 은행 계좌가 꼭 있어야 하나요?
+A: 아니요. 아마존 환전 서비스(Currency Converter for Sellers)로 해외 계좌에 받을 수 있고, 원화로 받으면 환전 수수료 1.5%가 붙어요. 아마존 글로벌셀링 코리아는 가상계좌도 안내해요.
+Q: 화장품은 바로 팔 수 있나요?
+A: 상품마다 달라요. 아마존은 많은 뷰티 상품이 판매 전 승인이 필요하다고 안내해요. 승인 때는 인보이스, 브랜드 승인서, 성분표·배치번호가 보이는 상품 사진, GMP·COA, MoCRA 관련 서류를 요청할 수 있어요.
+Q: 어떤 카드를 등록해야 하나요?
+A: 아마존 글로벌셀링 코리아 가이드 기준으로 해외 결제가 되는 법인 또는 본인 명의 신용·체크카드예요. BC카드와 PayPal은 등록할 수 없다고 안내해요.
+Q: 신규 셀러 혜택이 있나요?
+A: 있어요. 브랜드 레지스트리에 등록한 브랜드는 첫 $5만 매출의 10%, 이후 $95만의 5%를 크레딧으로 받을 수 있어요(최대 $52,500). Vine, FBA 입고, 광고·쿠폰 크레딧도 있어요. 조건과 기한은 셀러 센트럴 신규 셀러 혜택 화면에서 확인하세요.
+
+출처: 아마존 글로벌셀링 코리아, 셀러 가입 안내 (가이드 2026-10-29 업데이트) https://sell.amazon.co.kr/start/registration, Amazon, Seller registration guide (2026-11 확인) https://sell.amazon.com/sell/registration-guide, 아마존 글로벌셀링 코리아, 요금 안내 (2026-11 확인) https://sell.amazon.co.kr/start/pricing, Amazon, Selling on Amazon fees (2026-11 확인) https://sell.amazon.com/pricing, Amazon, Currency Converter for Sellers (2026-11 확인) https://sell.amazon.com/programs/amazon-currency-converter, Amazon, How to sell beauty products (2026-02-17) https://sell.amazon.com/blog/how-to-sell-beauty-products, 아마존 글로벌셀링 코리아, 신규 셀러 혜택 (2026-11 확인) https://sell.amazon.co.kr/start/new-seller-incentives
+
 ## 화장품 미국 진출 체크리스트 (https://www.kglowofficial.co.kr/us/checklist/)
 화장품 미국 진출 전에 확인할 것을 체크리스트로 정리했어요. 공통 서류, MoCRA·영문 라벨, 아마존 입점(브랜드 레지스트리·UPC·FBA), 틱톡샵 입점(W-8·미국 창고), 대행사 계약 전 확인까지 한 장씩 체크하고 PDF로 받아 보세요.
 PDF: https://www.kglowofficial.co.kr/us/checklist/kglow-us-checklist-2026.pdf
@@ -464,7 +523,7 @@ K-GLOW GROUP이 실제로 진행한 일을 모았어요. 미국 틱톡샵 크리
 - [인도 · 진행 중] 비건 스킨케어 브랜드, 인증부터 현지 입고까지 — 상황: 비건 스킨케어 브랜드가 인도 판매를 준비하고 있어요. 한 일: 인증을 진행하고 있어요. 인증이 끝나면 HANGUK SKIN이 사입해 현지 창고에 입고하고, 그동안 마케팅과 채널 입점을 함께 준비해요. 결과와 배운 점: 인증을 기다리는 시간에 판매 준비를 같이 하면 입고 뒤 판매까지의 시간이 줄어요.
 - [인도 · 진행 중] 인도 시장에 맞춘 마스크팩, 상품 기획부터 — 상황: 인도 고객을 겨냥한 마스크팩을 새로 만들고 있어요. 한 일: HANGUK SKIN이 상품 기획 단계부터 참여해 현지 고객과 유통 조건을 반영하고 있어요. 결과와 배운 점: 이미 있는 제품을 옮기는 것만이 아니라, 처음부터 인도에 맞춘 제품을 함께 만들 수도 있어요.
 
-## 아마존 화장품 MoCRA 가이드 (https://www.kglowofficial.co.kr/amazon/mocra/)
+## MoCRA FDA 화장품 등록 가이드 (https://www.kglowofficial.co.kr/amazon/mocra/)
 아마존에서 화장품을 팔 때 필요한 MoCRA 시설 등록과 제품 리스팅, 미국 에이전트, 라벨 연락처, 아마존이 요청할 수 있는 서류를 FDA 원문 기준으로 정리했어요.
 핵심 요약:
 - MoCRA는 2022년 미국에서 통과된 화장품 규제 현대화법이고, 시설 등록·제품 리스팅은 2024년 7월 1일부터 집행되고 있어요.
