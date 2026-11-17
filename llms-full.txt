@@ -473,6 +473,31 @@ A: 있어요. 브랜드 레지스트리에 등록한 브랜드는 첫 $5만 매�
 
 출처: 아마존 글로벌셀링 코리아, 셀러 가입 안내 (가이드 2026-10-29 업데이트) https://sell.amazon.co.kr/start/registration, Amazon, Seller registration guide (2026-11 확인) https://sell.amazon.com/sell/registration-guide, 아마존 글로벌셀링 코리아, 요금 안내 (2026-11 확인) https://sell.amazon.co.kr/start/pricing, Amazon, Selling on Amazon fees (2026-11 확인) https://sell.amazon.com/pricing, Amazon, Currency Converter for Sellers (2026-11 확인) https://sell.amazon.com/programs/amazon-currency-converter, Amazon, How to sell beauty products (2026-02-17) https://sell.amazon.com/blog/how-to-sell-beauty-products, 아마존 글로벌셀링 코리아, 신규 셀러 혜택 (2026-11 확인) https://sell.amazon.co.kr/start/new-seller-incentives
 
+## 미국 인플루언서 시딩·해외 체험단 대행 (https://www.kglowofficial.co.kr/us/influencer-seeding/)
+K-GLOW는 한국 브랜드를 위해 미국 인플루언서 시딩과 대규모 체험단을 대신 운영해요. 고객층이 맞는 틱톡 크리에이터를 찾고, 미국 안에서 샘플을 보내고, 협찬 표시(FTC)와 게시·판매 기록까지 한곳에서 관리해요.
+
+시딩 방식: 무가 시딩(제품 증정, 첫 반응·리뷰), 유가 협찬(원고료, 날짜가 중요한 캠페인), 커미션형(틱톡샵, 샘플 + 판매 커미션 1~80%).
+1. 목표와 제품 정리: 알리고 싶은지, 리뷰 콘텐츠가 필요한지, 틱톡샵 판매로 이어가고 싶은지부터 정해요. 목표에 따라 시딩 방식이 달라져요.
+2. 크리에이터 고르기: 팔로워 수보다 크리에이터를 보는 사람들의 피부 고민, 나이대, 관심사가 우리 고객과 맞는지 봐요.
+3. 연락과 브리프: 영어로 연락하고, 제품 정보와 함께 협찬 표시 방법과 피해야 할 효능 표현을 브리프에 넣어요.
+4. 미국 안에서 샘플 발송: 미국 창고(3PL)에서 보내 배송을 빠르게 하고, 받은 날짜와 게시 기한을 기록해요.
+5. 게시 확인과 기록: 누구에게 보냈고 어떤 콘텐츠가 올라왔고 얼마나 팔렸는지 자체 개발한 크리에이터 관리 도구에 남겨 정기 리포트로 공유해요.
+6. 잘 된 것에 넓히기: 반응이 좋았던 크리에이터와 콘텐츠 형식을 찾아 다음 시딩을 넓히고, 틱톡샵에서는 잘 팔린 영상에 광고를 붙여요.
+사례: 미국 틱톡샵에서 같은 스킨케어 제품·기간·조건으로 팔로워 2천 명대 크리에이터가 20만 명대보다 4배 더 팔았어요.
+
+Q: 미국 인플루언서 시딩은 몇 명에게 보내야 하나요?
+A: 정해진 숫자는 없어요. 제품, 목표, 예산에 따라 달라요. 처음에는 고객층이 맞는 여러 크리에이터에게 작게 보내 누가 실제로 게시하고 팔리는지 보고, 잘 된 쪽으로 넓히는 순서를 추천해요.
+Q: 샘플은 한국에서 보내나요?
+A: 미국 안에 재고를 두고 보내는 걸 추천해요. 배송이 빠르고 크리에이터가 받는 날짜를 맞추기 쉬워요. 틱톡샵 판매에 쓰는 미국 창고(3PL)를 함께 쓸 수 있어요.
+Q: 무료로 제품만 보내도 협찬 표시가 필요한가요?
+A: 필요할 수 있어요. 미국 FTC 안내에 따르면 홍보를 기대하고 무료로 제품을 받은 경우에도 브랜드와의 관계를 밝혀야 해요. 그래서 브리프에 표시 방법을 처음부터 넣어요.
+Q: 틱톡샵이 없어도 시딩을 할 수 있나요?
+A: 네. 리뷰 콘텐츠와 인지도를 위한 시딩은 틱톡샵 없이도 진행해요. 다만 시딩을 판매로 바로 잇고 싶다면 틱톡샵 커미션형이 맞아요. 입점이 필요하면 미국 틱톡샵 대행과 함께 진행해요.
+Q: 국내 체험단과 무엇이 다른가요?
+A: 크리에이터가 미국에 있어서 연락은 영어로, 배송은 미국 안에서 해요. 협찬 표시는 미국 FTC 기준을 따르고, 틱톡샵 커미션형은 TikTok이 정한 크리에이터 자격(팔로워 1,000명 이상, 미국 거주 등)을 갖춘 사람과 해요.
+
+출처: FTC, FTC's Endorsement Guides: What People Are Asking https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking, TikTok Shop Academy(US), Guide to Samples (2026-09-24) https://seller-us.tiktok.com/university/essay?knowledge_id=5764641632306946, TikTok Shop Academy(US), Creator Eligibility Policy (2026-09-25) https://seller-us.tiktok.com/university/essay?knowledge_id=6939143037667118, TikTok Shop Academy(US), Setting Up Affiliate Collaborations (2026-07-16) https://seller-us.tiktok.com/university/essay?knowledge_id=6837873164896001&lang=en
+
 ## 화장품 미국 진출 체크리스트 (https://www.kglowofficial.co.kr/us/checklist/)
 화장품 미국 진출 전에 확인할 것을 체크리스트로 정리했어요. 공통 서류, MoCRA·영문 라벨, 아마존 입점(브랜드 레지스트리·UPC·FBA), 틱톡샵 입점(W-8·미국 창고), 대행사 계약 전 확인까지 한 장씩 체크하고 PDF로 받아 보세요.
 PDF: https://www.kglowofficial.co.kr/us/checklist/kglow-us-checklist-2026.pdf
